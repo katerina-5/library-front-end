@@ -1,0 +1,29 @@
+<!-- <app-header></app-header> -->
+
+<div class="wrapper">
+  <div class="logo">
+    <a mat-button class="link" href="/">ToReadList</a>
+  </div>
+
+  <mat-card>
+    <form>
+      <div class="title">
+        <mat-card-title>Sign In to ToReadList</mat-card-title>
+      </div>
+      <br>
+      <mat-form-field>
+        <label for="">Login:</label>
+        <input matInput required>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <label for="">Password:</label>
+        <input matInput required>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button (click)="auth()">Sign In</button>
+    </form>
+  </mat-card>
+</div>
+
+<!-- <app-footer></app-footer> -->
