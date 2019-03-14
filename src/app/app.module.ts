@@ -39,6 +39,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminSignInComponent } from './admin-sign-in/admin-sign-in.component';
 import { AdminMainPageComponent } from './admin-main-page/admin-main-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AdminMainPageComponent } from './admin-main-page/admin-main-page.compon
     UserProfileComponent,
     AdminNavbarComponent,
     AdminSignInComponent,
-    AdminMainPageComponent
+    AdminMainPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
