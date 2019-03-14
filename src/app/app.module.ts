@@ -35,6 +35,7 @@ import { AuthorsCatalogComponent } from './authors-catalog/authors-catalog.compo
 import { GenresCatalogComponent } from './genres-catalog/genres-catalog.component';
 import { SignInFormComponent } from './sign-in-form/sign-in-form.component';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
     AuthorsCatalogComponent,
     GenresCatalogComponent,
     SignInFormComponent,
-    SignUpFormComponent
+    SignUpFormComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { AuthorsCatalogComponent } from 'src/app/authors-catalog/authors-catalog
 import { GenresCatalogComponent } from 'src/app/genres-catalog/genres-catalog.component';
 import { SignInFormComponent } from 'src/app/sign-in-form/sign-in-form.component';
 import { SignUpFormComponent } from 'src/app/sign-up-form/sign-up-form.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'genres', component: GenresCatalogComponent },
   { path: 'sign_in', component: SignInFormComponent },
   { path: 'sign_up', component: SignUpFormComponent },
+  { path: 'profile', component: UserProfileComponent },
   // { path: 'admin/login', component:  },
   // { path: '', redirectTo: 'admin/login', pathMatch: 'full' },
 ];
