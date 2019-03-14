@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  copyright = '© Copyright: Katerina Shevchenko Inc., 2019. All right reserved.';
+
   constructor() { }
 
   ngOnInit() {
