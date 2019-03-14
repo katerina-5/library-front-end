@@ -1,0 +1,88 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../../assets/books_and_coffee.jpg');
+    overflow: hidden;
+    overflow-y: hidden;  /*для вертикального*/
+    overflow-x: hidden;  /*для горизонтального*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo,
+.form {
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card {
+    background-color: white;
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    display: flex;
+    align-items: stretch;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+mat-form-field {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(214, 214, 206);
+    color: black;
+    transition: all 0.5s ease-out;
+}
+
+.link {
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease-out;
+}

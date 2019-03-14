@@ -36,6 +36,9 @@ import { GenresCatalogComponent } from './genres-catalog/genres-catalog.componen
 import { SignInFormComponent } from './sign-in-form/sign-in-form.component';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { AdminSignInComponent } from './admin-sign-in/admin-sign-in.component';
+import { AdminMainPageComponent } from './admin-main-page/admin-main-page.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     GenresCatalogComponent,
     SignInFormComponent,
     SignUpFormComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    AdminNavbarComponent,
+    AdminSignInComponent,
+    AdminMainPageComponent
   ],
   imports: [
     BrowserModule,

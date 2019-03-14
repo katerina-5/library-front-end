@@ -8,6 +8,8 @@ import { GenresCatalogComponent } from 'src/app/genres-catalog/genres-catalog.co
 import { SignInFormComponent } from 'src/app/sign-in-form/sign-in-form.component';
 import { SignUpFormComponent } from 'src/app/sign-up-form/sign-up-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { AdminSignInComponent } from './admin-sign-in/admin-sign-in.component';
+import { AdminMainPageComponent } from './admin-main-page/admin-main-page.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -17,8 +19,8 @@ const routes: Routes = [
   { path: 'sign_in', component: SignInFormComponent },
   { path: 'sign_up', component: SignUpFormComponent },
   { path: 'profile', component: UserProfileComponent },
-  // { path: 'admin/login', component:  },
-  // { path: '', redirectTo: 'admin/login', pathMatch: 'full' },
+  { path: 'admin/sign_in', component: AdminSignInComponent },
+  { path: 'admin/main_page', component: AdminMainPageComponent },
 ];
 
 @NgModule({
