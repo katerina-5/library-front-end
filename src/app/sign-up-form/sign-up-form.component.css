@@ -69,7 +69,7 @@ mat-card {
     margin: auto;
     width: 90%;
     max-width: 500px;
-    height: 300px;
+    height: 400px;
     display: flex;
     align-items: stretch;
 }
@@ -90,6 +90,7 @@ mat-form-field {
 
 form {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -106,4 +107,8 @@ button:hover {
     background-color: rgb(214, 214, 206);
     color: black;
     transition: all 0.5s ease-out;
+}
+
+.signIn {
+    text-align: center;
 }
