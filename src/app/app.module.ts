@@ -40,6 +40,7 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AdminSignInComponent } from './admin-sign-in/admin-sign-in.component';
 import { AdminMainPageComponent } from './admin-main-page/admin-main-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AdminEditingModeComponent } from './admin-editing-mode/admin-editing-mode.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AdminNavbarComponent,
     AdminSignInComponent,
     AdminMainPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AdminEditingModeComponent
   ],
   imports: [
     BrowserModule,

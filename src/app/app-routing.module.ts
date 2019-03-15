@@ -11,6 +11,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AdminSignInComponent } from './admin-sign-in/admin-sign-in.component';
 import { AdminMainPageComponent } from './admin-main-page/admin-main-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AdminEditingModeComponent } from './admin-editing-mode/admin-editing-mode.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'profile', component: UserProfileComponent },
   { path: 'admin/sign_in', component: AdminSignInComponent },
   { path: 'admin/main_page', component: AdminMainPageComponent },
+  { path: 'admin/editing_mode', component: AdminEditingModeComponent },
   { path: 'error', component: NotFoundComponent },
   { path: 'admin', redirectTo: 'admin/sign_in', pathMatch: 'full' },
   { path: '**', redirectTo: 'error', pathMatch: 'full' }
