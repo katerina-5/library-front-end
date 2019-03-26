@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url('../../assets/books_and_coffee.jpg');
+    background-image: url('../../../../assets/books_and_coffee.jpg');
     overflow: hidden;
     overflow-y: hidden;  /*для вертикального*/
     overflow-x: hidden;  /*для горизонтального*/

@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { BooksCatalogComponent } from './books-catalog/books-catalog.component';
-import { MainPageComponent } from 'src/app/main-page/main-page.component';
-import { AuthorsCatalogComponent } from 'src/app/authors-catalog/authors-catalog.component';
-import { GenresCatalogComponent } from 'src/app/genres-catalog/genres-catalog.component';
-import { SignInFormComponent } from 'src/app/sign-in-form/sign-in-form.component';
-import { SignUpFormComponent } from 'src/app/sign-up-form/sign-up-form.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { AdminSignInComponent } from './admin-sign-in/admin-sign-in.component';
-import { AdminMainPageComponent } from './admin-main-page/admin-main-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { AdminEditingModeComponent } from './admin-editing-mode/admin-editing-mode.component';
+import { BooksCatalogComponent } from './components/pages/books-catalog/books-catalog.component';
+import { MainPageComponent } from './components/pages/main-page/main-page.component';
+import { AuthorsCatalogComponent } from './components/pages/authors-catalog/authors-catalog.component';
+import { GenresCatalogComponent } from './components/pages/genres-catalog/genres-catalog.component';
+import { SignInFormComponent } from './components/pages/sign-in-form/sign-in-form.component';
+import { SignUpFormComponent } from './components/pages/sign-up-form/sign-up-form.component';
+import { UserProfileComponent } from './components/pages/user-profile/user-profile.component';
+import { AdminSignInComponent } from './components/pages/admin-sign-in/admin-sign-in.component';
+import { AdminMainPageComponent } from './components/pages/admin-main-page/admin-main-page.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { AdminEditingModeComponent } from './components/pages/admin-editing-mode/admin-editing-mode.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },

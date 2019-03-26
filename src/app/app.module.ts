@@ -27,20 +27,20 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 // component modules
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { BooksCatalogComponent } from './books-catalog/books-catalog.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { AuthorsCatalogComponent } from './authors-catalog/authors-catalog.component';
-import { GenresCatalogComponent } from './genres-catalog/genres-catalog.component';
-import { SignInFormComponent } from './sign-in-form/sign-in-form.component';
-import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
-import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
-import { AdminSignInComponent } from './admin-sign-in/admin-sign-in.component';
-import { AdminMainPageComponent } from './admin-main-page/admin-main-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { AdminEditingModeComponent } from './admin-editing-mode/admin-editing-mode.component';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { BooksCatalogComponent } from './components/pages/books-catalog/books-catalog.component';
+import { MainPageComponent } from './components/pages/main-page/main-page.component';
+import { AuthorsCatalogComponent } from './components/pages/authors-catalog/authors-catalog.component';
+import { GenresCatalogComponent } from './components/pages/genres-catalog/genres-catalog.component';
+import { SignInFormComponent } from './components/pages/sign-in-form/sign-in-form.component';
+import { SignUpFormComponent } from './components/pages/sign-up-form/sign-up-form.component';
+import { UserProfileComponent } from './components/pages/user-profile/user-profile.component';
+import { AdminNavbarComponent } from './components/shared/admin-navbar/admin-navbar.component';
+import { AdminSignInComponent } from './components/pages/admin-sign-in/admin-sign-in.component';
+import { AdminMainPageComponent } from './components/pages/admin-main-page/admin-main-page.component';
+import { NotFoundComponent } from './components/pages/not-found/not-found.component';
+import { AdminEditingModeComponent } from './components/pages/admin-editing-mode/admin-editing-mode.component';
 
 @NgModule({
   declarations: [
