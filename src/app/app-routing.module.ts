@@ -12,12 +12,14 @@ import { AdminSignInComponent } from './components/pages/admin-sign-in/admin-sig
 import { AdminMainPageComponent } from './components/pages/admin-main-page/admin-main-page.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { AdminEditingModeComponent } from './components/pages/admin-editing-mode/admin-editing-mode.component';
+import { SeriesCatalogComponent } from './components/pages/series-catalog/series-catalog.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'books', component: BooksCatalogComponent },
   { path: 'authors', component: AuthorsCatalogComponent },
   { path: 'genres', component: GenresCatalogComponent },
+  { path: 'series', component: SeriesCatalogComponent },
   { path: 'sign_in', component: SignInFormComponent },
   { path: 'sign_up', component: SignUpFormComponent },
   { path: 'profile', component: UserProfileComponent },

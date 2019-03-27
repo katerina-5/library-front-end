@@ -15,6 +15,8 @@ export class HeaderComponent implements OnInit {
   // authorsCatalog = 'Каталог авторів';
   genresCatalog = 'Catalog of genres';
   // genresCatalog = 'Каталог жанрів';
+  seriesCatalog = 'Catalog of book series';
+  // seriesCatalog = 'Каталог книжних серій';
   signIn = 'Sign in';
   // signIn = 'Ввійти';
   signUp = 'Sign up';
