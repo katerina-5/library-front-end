@@ -3,34 +3,10 @@
 
   <div class="main">
     <p>Books catalog!</p>
-    <ul>
+    <!-- <ul>
       <li *ngFor="let book of books">{{ book }}</li>
-    </ul>
-
-    <p>Books catalog!</p>
-    <ul>
-      <li *ngFor="let book of books">{{ book }}</li>
-    </ul>
-
-    <p>Books catalog!</p>
-    <ul>
-      <li *ngFor="let book of books">{{ book }}</li>
-    </ul>
-
-    <p>Books catalog!</p>
-    <ul>
-      <li *ngFor="let book of books">{{ book }}</li>
-    </ul>
-
-    <p>Books catalog!</p>
-    <ul>
-      <li *ngFor="let book of books">{{ book }}</li>
-    </ul>
-
-    <p>Books catalog!</p>
-    <ul>
-      <li *ngFor="let book of books">{{ book }}</li>
-    </ul>
+    </ul> -->
+    <app-book-item class="book__item" *ngFor="let book of books" [bookItem]="book"></app-book-item>
   </div>
 
   <app-footer></app-footer>
