@@ -42,6 +42,7 @@ import { AdminMainPageComponent } from './components/pages/admin-main-page/admin
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { AdminEditingModeComponent } from './components/pages/admin-editing-mode/admin-editing-mode.component';
 import { SeriesCatalogComponent } from './components/pages/series-catalog/series-catalog.component';
+import { BookItemComponent } from './components/pages/books-catalog/book-item/book-item.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { SeriesCatalogComponent } from './components/pages/series-catalog/series
     AdminMainPageComponent,
     NotFoundComponent,
     AdminEditingModeComponent,
-    SeriesCatalogComponent
+    SeriesCatalogComponent,
+    BookItemComponent
   ],
   imports: [
     BrowserModule,
