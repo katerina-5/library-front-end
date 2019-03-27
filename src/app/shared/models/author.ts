@@ -1,7 +1,7 @@
 export class Author {
-    static URL_PREFIX: string = 'http://readly.ru';
+    static URL_PREFIX: 'http://readly.ru';
 
-    idAuthor: integer;
+    idAuthor: number; // integer
     title: string;
     url: string;
 }

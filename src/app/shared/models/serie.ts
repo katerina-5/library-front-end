@@ -1,7 +1,7 @@
 export class Serie {
-    static URL_PREFIX: string = 'http://readly.ru';
+    static URL_PREFIX: 'http://readly.ru';
 
-    idSerie: integer;
+    idSerie: number; // integer
     title: string;
     url: string;
 }
