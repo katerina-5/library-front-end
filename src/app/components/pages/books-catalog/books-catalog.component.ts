@@ -80,4 +80,6 @@ export class BooksCatalogComponent implements OnInit {
   ngOnInit() {
   }
 
+  search() { }
+
 }

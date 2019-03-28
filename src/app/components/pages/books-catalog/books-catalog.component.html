@@ -2,6 +2,11 @@
   <app-header></app-header>
 
   <div class="main">
+    <div class="search">
+      <input matInput type="text" placeholder="Search..." />
+      <button (click)="search()" type="submit">Search</button>
+    </div>
+
     <p style="font-weight: bold; color: red;">Books catalog!</p>
     <!-- <ul>
       <li *ngFor="let book of books">{{ book }}</li>
