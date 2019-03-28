@@ -4,15 +4,30 @@
       <div class="title">
         <h1>{{ bookItem.title }}</h1>
       </div>
-      <label for="">Url: <a href="http://readly.ru{{ bookItem.url }}">readly.ru{{ bookItem.url }}</a></label>
-      <label for="">Serie: <span>{{ bookItem.serie }}</span></label>
+      <div class="information">
+        <div class="fields">
+          <label for="">Url: <a href="http://readly.ru{{ bookItem.url }}">readly.ru{{ bookItem.url }}</a></label>
+          <label for="">Serie: <span>{{ bookItem.serie }}</span></label>
+          <label for="">Authors: <ul>
+              <li *ngFor="let author of bookItem.authors"><a href="{{ author.url }}">{{ author.fullName }}</a></li>
+            </ul></label>
+          <label for="">Genres: <ul>
+              <li *ngFor="let genre of bookItem.genres">{{ genre.title }} - {{ genre.url }}</li>
+            </ul></label>
+          <label for="">Year: <span>{{ bookItem.year }}</span></label>
+          <label for="">Rating: <span>{{ bookItem.rating }}</span></label>
+          <label for="">Description: <p>{{ bookItem.description }}</p></label>
+        </div>
+
+        <div class="image">
+          <img src="{{ bookItem.image }}" alt="">
+        </div>
+      </div>
+
       <!-- <div class="field">
         <h3>Serie: </h3>
         <span>{{ bookItem.serie }}</span>
       </div> -->
-      <label for="">Authors: <ul>
-          <li *ngFor="let author of bookItem.authors"><a href="{{ author.url }}">{{ author.fullName }}</a></li>
-        </ul></label>
       <!-- <div class="field">
         <h3>Authors: </h3>
         <ul>
@@ -20,18 +35,12 @@
             <a href="{{ author.url }}">{{ author.url }}</a></li>
         </ul>
       </div> -->
-      <label for="">Genres: <ul>
-          <li *ngFor="let genre of bookItem.genres">{{ genre.title }} - {{ genre.url }}</li>
-        </ul></label>
       <!-- <div class="field">
         <h3>Genres: </h3>
         <ul>
           <li *ngFor="let genre of bookItem.genres">{{ genre.title }} - {{ genre.url }}</li>
         </ul>
       </div> -->
-      <label for="">Year: <span>{{ bookItem.year }}</span></label>
-      <label for="">Rating: <span>{{ bookItem.rating }}</span></label>
-      <label for="">Description: <p>{{ bookItem.description }}</p></label>
       <!-- <div class="field">
         <h3>Year: </h3>
         <span>{{ bookItem.year }}</span>

@@ -16,8 +16,30 @@ mat-card {
     text-align: center;
 }
 
-.field {
+.information {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+label {
+    font-weight: bold;
+}
+
+span,
+a,
+p {
+    font-weight: normal;
+}
+
+/* .field {
     margin: 0;
     display: flex;
     align-items: center;
-}
+} */

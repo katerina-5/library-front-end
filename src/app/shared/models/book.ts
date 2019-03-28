@@ -9,6 +9,7 @@ export class Book {
     idBook: number; // integer
     title: string;
     url: string;
+    image: string;
     year: number;
     description: string;
     rating: number; // float
