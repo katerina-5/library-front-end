@@ -1,10 +1,19 @@
-<app-header></app-header>
+<div class="wrapper">
+  <app-header></app-header>
 
-<div class="main">
-  <p>Genres catalog!</p>
-  <ul>
-    <li *ngFor="let genre of genres">{{ genre }}</li>
-  </ul>
+  <div class="main">
+    <div class="search">
+      <input class="search__input" type="text" placeholder="Search..." />
+      <button class="search__btn" (click)="search()" type="submit">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+
+    <p>Genres catalog!</p>
+    <ul>
+      <li *ngFor="let genre of genres">{{ genre }}</li>
+    </ul>
+  </div>
+
+  <app-footer></app-footer>
 </div>
-
-<app-footer></app-footer>

@@ -2,6 +2,13 @@
   <app-header></app-header>
 
   <div class="main">
+    <div class="search">
+      <input class="search__input" type="text" placeholder="Search..." />
+      <button class="search__btn" (click)="search()" type="submit">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+
     <p>Series catalog!</p>
     <ul>
       <li *ngFor="let serie of series">{{ serie }}</li>
