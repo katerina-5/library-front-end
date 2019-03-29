@@ -1,2 +1,8 @@
 @import './../../../shared/styles/catalog.css';
 @import './../../../shared/styles/search.css';
+
+/* GENRE ITEM */
+
+.genre__item {
+    width: 80%;
+}

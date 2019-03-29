@@ -9,10 +9,11 @@
       </button>
     </div>
 
-    <p>Genres catalog!</p>
-    <ul>
+    <p style="font-weight: bold; color: red;">Genres catalog!</p>
+    <!-- <ul>
       <li *ngFor="let genre of genres">{{ genre }}</li>
-    </ul>
+    </ul> -->
+    <app-genre-item class="genre__item" *ngFor="let genre of genres" [genreItem]="genre"></app-genre-item>
   </div>
 
   <app-footer></app-footer>
