@@ -1,2 +1,8 @@
 @import './../../../shared/styles/catalog.css';
 @import './../../../shared/styles/search.css';
+
+/* SERIE ITEM */
+
+.serie__item {
+    width: 80%;
+}

@@ -46,6 +46,7 @@ import { SeriesCatalogComponent } from './components/pages/series-catalog/series
 import { BookItemComponent } from './components/pages/books-catalog/book-item/book-item.component';
 import { AuthorItemComponent } from './components/pages/authors-catalog/author-item/author-item.component';
 import { GenreItemComponent } from './components/pages/genres-catalog/genre-item/genre-item.component';
+import { SerieItemComponent } from './components/pages/series-catalog/serie-item/serie-item.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { GenreItemComponent } from './components/pages/genres-catalog/genre-item
     SeriesCatalogComponent,
     BookItemComponent,
     AuthorItemComponent,
-    GenreItemComponent
+    GenreItemComponent,
+    SerieItemComponent
   ],
   imports: [
     BrowserModule,

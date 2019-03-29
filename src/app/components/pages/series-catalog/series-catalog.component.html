@@ -9,10 +9,11 @@
       </button>
     </div>
 
-    <p>Series catalog!</p>
-    <ul>
+    <p style="font-weight: bold; color: red;">Series catalog!</p>
+    <!-- <ul>
       <li *ngFor="let serie of series">{{ serie }}</li>
-    </ul>
+    </ul> -->
+    <app-serie-item class="serie__item" *ngFor="let serie of series" [serieItem]="serie"></app-serie-item>
   </div>
 
   <app-footer></app-footer>
