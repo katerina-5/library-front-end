@@ -9,10 +9,11 @@
       </button>
     </div>
 
-    <p>Authors catalog!</p>
-    <ul>
+    <p style="font-weight: bold; color: red;">Authors catalog!</p>
+    <!-- <ul>
       <li *ngFor="let author of authors">{{ author }}</li>
-    </ul>
+    </ul> -->
+    <app-author-item class="author__item" *ngFor="let author of authors" [authorItem]="author"></app-author-item>
   </div>
 
   <app-footer></app-footer>

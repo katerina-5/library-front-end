@@ -1,2 +1,8 @@
 @import './../../../shared/styles/catalog.css';
 @import './../../../shared/styles/search.css';
+
+/* AUTHOR ITEM */
+
+.author__item {
+    width: 80%;
+}
