@@ -20,8 +20,8 @@ export class AdminSignInComponent implements OnInit {
   }
 
   adminAuth(login, password) {
-    if (this.login === login.value) {
-      if (this.password === password.value) {
+    if (this.login === login) {
+      if (this.password === password) {
         // redirect to admin panel
         this.router.navigate(['admin/main_page'])
           .catch((error) => alert(error));
