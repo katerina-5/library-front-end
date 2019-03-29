@@ -18,6 +18,14 @@
         <label for="">Password:</label>
         <input matInput #password required>
       </mat-form-field>
+      <!-- <mat-form-field>
+        <input matInput placeholder="Enter your password" #pass [type]="hide ? 'password' : 'text'" required>
+        <mat-icon (click)="hide = !hide" *ngIf="hide; then hide_block; else show_block">
+          {{hide ? 'visibility_off' : 'visibility'}}
+          <ng-template #hide_block><img src="../../../../assets/eye_hide.ico" alt=""></ng-template>
+          <ng-template #show_block><img src="../../../../assets/eye_show.ico" alt=""></ng-template>
+        </mat-icon>
+      </mat-form-field> -->
       <br>
       <button mat-raised-button (click)="adminAuth(login, password)">Sign In</button>
     </form>

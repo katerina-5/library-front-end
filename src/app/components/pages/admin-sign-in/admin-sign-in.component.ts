@@ -12,6 +12,8 @@ export class AdminSignInComponent implements OnInit {
   login = 'admin';
   password = 'admin';
 
+  hide = true;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
