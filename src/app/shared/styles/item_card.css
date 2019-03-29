@@ -1,0 +1,37 @@
+.item {
+    margin: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+mat-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+}
+
+.information {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+label {
+    font-weight: bold;
+}
+
+span,
+a,
+p {
+    font-weight: normal;
+}
