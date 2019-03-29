@@ -1,5 +1,4 @@
 <div class="wrapper">
-  <!-- <div class="background"></div> -->
   <div>
     <a mat-button class="link" href="/">ToReadList</a>
   </div>
@@ -8,30 +7,26 @@
       <div class="title">
         <mat-card-title>Sign Up for ToReadList</mat-card-title>
       </div>
-      <br>
       <mat-form-field>
-        <label for="">Surname:</label>
-        <input matInput required>
+        <input matInput placeholder="Surname:" #surname required>
+        <mat-icon matSuffix>mood</mat-icon>
       </mat-form-field>
-      <br>
       <mat-form-field>
-        <label for="">Name:</label>
-        <input matInput required>
+        <input matInput placeholder="Name:" #name required>
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
       </mat-form-field>
-      <br>
       <mat-form-field>
-        <label for="">Login:</label>
-        <input matInput required>
+        <input matInput placeholder="Login:" #login required>
+        <mat-icon matSuffix>account_circle</mat-icon>
       </mat-form-field>
-      <br>
       <mat-form-field>
-        <label for="">Password:</label>
-        <input matInput required>
+        <input matInput placeholder="Password:" #password required>
+        <mat-icon class="icon__show__hide" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
       </mat-form-field>
-      <br>
-      <button mat-raised-button (click)="register()">Sign Up</button>
 
-      <br>
+      <button mat-raised-button (click)="register(surname.value, name.value, login.value, password.value)">
+        Sign Up</button>
 
       <div class="signIn">
         <span>

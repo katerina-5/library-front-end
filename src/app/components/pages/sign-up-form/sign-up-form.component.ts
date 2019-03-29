@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignUpFormComponent implements OnInit {
 
+  hide = true;
+
   constructor() { }
 
   ngOnInit() {

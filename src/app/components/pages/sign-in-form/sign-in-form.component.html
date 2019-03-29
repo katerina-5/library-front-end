@@ -8,20 +8,21 @@
       <div class="title">
         <mat-card-title>Sign In to ToReadList</mat-card-title>
       </div>
-      <br>
+      <!-- <br> -->
       <mat-form-field>
-        <label for="">Login:</label>
-        <input matInput required>
+        <input matInput placeholder="Login:" #login required>
+        <mat-icon matSuffix>account_circle</mat-icon>
       </mat-form-field>
-      <br>
+      <!-- <br> -->
       <mat-form-field>
-        <label for="">Password:</label>
-        <input matInput required>
+        <input matInput placeholder="Password:" #password [type]="hide ? 'password' : 'text'" required>
+        <mat-icon class="icon__show__hide" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
       </mat-form-field>
-      <br>
-      <button mat-raised-button (click)="auth()">Sign In</button>
+      <!-- <br> -->
+      <button mat-raised-button (click)="auth(login.value, password.value)">Sign In</button>
 
-      <br>
+      <!-- <br> -->
 
       <div class="signUp">
         <span>

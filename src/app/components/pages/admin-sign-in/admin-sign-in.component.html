@@ -8,31 +8,19 @@
       <div class="title">
         <mat-card-title>Sign In to ToReadList Admin Panel</mat-card-title>
       </div>
-      <br>
+      <!-- <br> -->
       <mat-form-field>
-        <label for="">Login:</label>
-        <input matInput #login required>
+        <input matInput placeholder="Login:" #login required>
+        <mat-icon matSuffix>account_circle</mat-icon>
       </mat-form-field>
-      <br>
+      <!-- <br> -->
       <mat-form-field>
-        <label for="">Password:</label>
-        <input matInput #password required>
-        <mat-icon (click)="hide = !hide" *ngIf="hide; then hide_block; else show_block">
-          {{hide ? '#hide_block' : '#show_block'}}
-          <ng-template #hide_block><img src="../../../../assets/eye_hide.ico" alt=""></ng-template>
-          <ng-template #show_block><img src="../../../../assets/eye_show.ico" alt=""></ng-template>
+        <input matInput placeholder="Password:" #password [type]="hide ? 'password' : 'text'" required>
+        <mat-icon class="icon__show__hide" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
         </mat-icon>
       </mat-form-field>
-      <!-- <mat-form-field>
-        <input matInput placeholder="Enter your password" #pass [type]="hide ? 'password' : 'text'" required>
-        <mat-icon (click)="hide = !hide" *ngIf="hide; then hide_block; else show_block">
-          {{hide ? 'visibility_off' : 'visibility'}}
-          <ng-template #hide_block><img src="../../../../assets/eye_hide.ico" alt=""></ng-template>
-          <ng-template #show_block><img src="../../../../assets/eye_show.ico" alt=""></ng-template>
-        </mat-icon>
-      </mat-form-field> -->
-      <br>
-      <button mat-raised-button (click)="adminAuth(login, password)">Sign In</button>
+      <!-- <br> -->
+      <button mat-raised-button (click)="adminAuth(login.value, password.value)">Sign In</button>
     </form>
   </mat-card>
 </div>
