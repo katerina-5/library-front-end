@@ -1,0 +1,23 @@
+.search {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search__input {
+    width: 50%;
+}
+
+.search__input,
+.search__btn {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.search__btn {
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
