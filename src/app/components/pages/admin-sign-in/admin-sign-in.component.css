@@ -4,6 +4,10 @@
     background-image: url('../../../../assets/books_and_coffee.jpg');
 }
 
+mat-form-field {
+    width: 90%;
+}
+
 /* .wrapper {
     width: 100%;
     height: 100vh;
