@@ -1,6 +1,24 @@
 @import './../../../shared/styles/catalog.css';
 @import './../../../shared/styles/search.css';
 
+.another__search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.another__search > mat-form-field {
+    width: 50%;
+}
+
+.search__field {
+    width: 100%;
+}
+
+.btn__search:hover {
+    cursor: pointer;
+}
+
 /* BOOK ITEM */
 
 .book__item {
