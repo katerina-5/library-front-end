@@ -25,7 +25,8 @@
     <ul class="items">
       <li class="item__wrapper" *ngFor="let book of books">
         <div class="item">
-          <a href="http://readly.ru{{ book.url }}">{{ book.title }} (by {{ book.authors[0].fullName }})</a>
+          <!-- <a href="http://readly.ru{{ book.url }}">{{ book.title }} (by {{ book.authors[0].fullName }})</a> -->
+          <a [routerLink]="['/book-details', book.idBook]">{{ book.title }} (by {{ book.authors[0].fullName }})</a>
           <div class="item__photo">
             <img src="{{ book.image }}" alt="">
           </div>

@@ -1,60 +1,66 @@
-<div>
-  <div class="item">
-    <mat-card>
-      <div class="title">
-        <h1>{{ bookItem.title }}</h1>
-      </div>
-      <div class="information">
-        <div class="fields">
-          <label for="">Url: <a href="http://readly.ru{{ bookItem.url }}">readly.ru{{ bookItem.url }}</a></label>
-          <label for="" *ngIf="bookItem.serie != null; else serieIsNull">Serie:
-            <span>{{ bookItem.serie }}</span></label>
-          <ng-template #serieIsNull><label for="">Serie: <span>none</span></label></ng-template>
-          <label for="">Authors: <ul>
-              <li *ngFor="let author of bookItem.authors"><a href="{{ author.url }}">{{ author.fullName }}</a></li>
-            </ul></label>
-          <label for="">Genres: <ul>
-              <li *ngFor="let genre of bookItem.genres">{{ genre.title }} - {{ genre.url }}</li>
-            </ul></label>
-          <label for="">Year: <span>{{ bookItem.year }}</span></label>
-          <label for="">Rating: <span>{{ bookItem.rating }}</span></label>
-          <label for="">Description: <p>{{ bookItem.description }}</p></label>
+<div class="wrapper">
+  <app-header></app-header>
+
+  <div class="main">
+    <div class="item">
+      <mat-card>
+        <div class="title">
+          <h1>{{ bookItem.title }}</h1>
+        </div>
+        <div class="information">
+          <div class="fields">
+            <label for="">Url: <a href="http://readly.ru{{ bookItem.url }}">readly.ru{{ bookItem.url }}</a></label>
+            <label for="" *ngIf="bookItem.serie != null; else serieIsNull">Serie:
+              <span>{{ bookItem.serie }}</span></label>
+            <ng-template #serieIsNull><label for="">Serie: <span>none</span></label></ng-template>
+            <label for="">Authors: <ul>
+                <li *ngFor="let author of bookItem.authors"><a href="{{ author.url }}">{{ author.fullName }}</a></li>
+              </ul></label>
+            <label for="">Genres: <ul>
+                <li *ngFor="let genre of bookItem.genres">{{ genre.title }} - {{ genre.url }}</li>
+              </ul></label>
+            <label for="">Year: <span>{{ bookItem.year }}</span></label>
+            <label for="">Rating: <span>{{ bookItem.rating }}</span></label>
+            <label for="">Description: <p>{{ bookItem.description }}</p></label>
+          </div>
+
+          <div class="image">
+            <img src="{{ bookItem.image }}" alt="">
+          </div>
         </div>
 
-        <div class="image">
-          <img src="{{ bookItem.image }}" alt="">
-        </div>
-      </div>
-
-      <!-- <div class="field">
-        <h3>Serie: </h3>
-        <span>{{ bookItem.serie }}</span>
-      </div> -->
-      <!-- <div class="field">
-        <h3>Authors: </h3>
-        <ul>
-          <li *ngFor="let author of bookItem.authors">{{ author.fullName }} -
-            <a href="{{ author.url }}">{{ author.url }}</a></li>
-        </ul>
-      </div> -->
-      <!-- <div class="field">
-        <h3>Genres: </h3>
-        <ul>
-          <li *ngFor="let genre of bookItem.genres">{{ genre.title }} - {{ genre.url }}</li>
-        </ul>
-      </div> -->
-      <!-- <div class="field">
-        <h3>Year: </h3>
-        <span>{{ bookItem.year }}</span>
-      </div>
-      <div class="field">
-        <h3>Rating: </h3>
-        <span>{{ bookItem.rating }}</span>
-      </div>
-      <div class="field">
-        <h3>Description: </h3>
-        <p>{{ bookItem.description }}</p>
-      </div> -->
-    </mat-card>
+        <!-- <div class="field">
+              <h3>Serie: </h3>
+              <span>{{ bookItem.serie }}</span>
+            </div> -->
+        <!-- <div class="field">
+              <h3>Authors: </h3>
+              <ul>
+                <li *ngFor="let author of bookItem.authors">{{ author.fullName }} -
+                  <a href="{{ author.url }}">{{ author.url }}</a></li>
+              </ul>
+            </div> -->
+        <!-- <div class="field">
+              <h3>Genres: </h3>
+              <ul>
+                <li *ngFor="let genre of bookItem.genres">{{ genre.title }} - {{ genre.url }}</li>
+              </ul>
+            </div> -->
+        <!-- <div class="field">
+              <h3>Year: </h3>
+              <span>{{ bookItem.year }}</span>
+            </div>
+            <div class="field">
+              <h3>Rating: </h3>
+              <span>{{ bookItem.rating }}</span>
+            </div>
+            <div class="field">
+              <h3>Description: </h3>
+              <p>{{ bookItem.description }}</p>
+            </div> -->
+      </mat-card>
+    </div>
   </div>
+
+  <app-footer></app-footer>
 </div>
