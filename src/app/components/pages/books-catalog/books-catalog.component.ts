@@ -37,7 +37,7 @@ export class BooksCatalogComponent implements OnInit {
       idBook: 2,
       title: 'Persuasion',
       url: '/book/57798/',
-      image: '',
+      image: 'http://readly.ru/public/media/covers/9/d/9dad80451ea69848bfa727768181f811_200x0.jpg',
       year: 1815,
       rating: 8.4,
       description: 'Best book # 2',
@@ -57,7 +57,47 @@ export class BooksCatalogComponent implements OnInit {
       idBook: 3,
       title: 'Emma',
       url: '/book/4211/',
-      image: '',
+      image: 'http://readly.ru/public/media/covers/5/8/582481894fa8e589f27ade3ba69af8af_200x0.jpg',
+      year: 1815,
+      rating: 8.5,
+      description: 'Best book # 3',
+      serie: null,
+      genres: [{
+        idGenre: 5,
+        title: 'classic',
+        url: 'http://readly.ru/genre/180'
+      }],
+      authors: [{
+        idAuthor: 1,
+        fullName: 'Jane Austen',
+        url: 'http://readly.ru/author/17138/'
+      }]
+    },
+    {
+      idBook: 3,
+      title: 'Emma',
+      url: '/book/4211/',
+      image: 'http://readly.ru/public/media/covers/5/8/582481894fa8e589f27ade3ba69af8af_200x0.jpg',
+      year: 1815,
+      rating: 8.5,
+      description: 'Best book # 3',
+      serie: null,
+      genres: [{
+        idGenre: 5,
+        title: 'classic',
+        url: 'http://readly.ru/genre/180'
+      }],
+      authors: [{
+        idAuthor: 1,
+        fullName: 'Jane Austen',
+        url: 'http://readly.ru/author/17138/'
+      }]
+    },
+    {
+      idBook: 3,
+      title: 'Emma',
+      url: '/book/4211/',
+      image: 'http://readly.ru/public/media/covers/5/8/582481894fa8e589f27ade3ba69af8af_200x0.jpg',
       year: 1815,
       rating: 8.5,
       description: 'Best book # 3',
