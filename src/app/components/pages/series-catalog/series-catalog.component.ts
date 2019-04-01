@@ -26,7 +26,7 @@ export class SeriesCatalogComponent implements OnInit {
       idSerie: 3,
       title: 'Остап Бендер',
       url: '/serie/1378/',
-      description: ''
+      description: 'Остросатирическая серия о приключениях гениального мошенника и авантюриста Остапа Бендера.'
     }
   ];
 
