@@ -1,3 +1,7 @@
+.main {
+    height: calc(100vh - 2*50px);
+}
+
 .item {
     margin: 5px;
     width: 100%;
@@ -17,6 +21,7 @@ mat-card {
 
 .information {
     display: flex;
+    /* flex-direction: row; */
     justify-content: space-around;
 }
 
@@ -35,3 +40,9 @@ a,
 p {
     font-weight: normal;
 }
+
+/* .field {
+    margin: 0;
+    display: flex;
+    align-items: center;
+} */

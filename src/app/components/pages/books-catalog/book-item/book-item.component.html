@@ -11,13 +11,15 @@
           <div class="fields">
             <label for="">Url: <a href="http://readly.ru{{ bookItem.url }}">readly.ru{{ bookItem.url }}</a></label>
             <label for="" *ngIf="bookItem.serie != null; else serieIsNull">Serie:
-              <span>{{ bookItem.serie }}</span></label>
+              <!-- <span>{{ bookItem.serie }}</span> -->
+              <a href="{{ bookItem.serie.url }}">{{ bookItem.serie }}</a>
+            </label>
             <ng-template #serieIsNull><label for="">Serie: <span>none</span></label></ng-template>
             <label for="">Authors: <ul>
                 <li *ngFor="let author of bookItem.authors"><a href="{{ author.url }}">{{ author.fullName }}</a></li>
               </ul></label>
             <label for="">Genres: <ul>
-                <li *ngFor="let genre of bookItem.genres">{{ genre.title }} - {{ genre.url }}</li>
+                <li *ngFor="let genre of bookItem.genres"><a href="{{ genre.url }}">{{ genre.title }}</a></li>
               </ul></label>
             <label for="">Year: <span>{{ bookItem.year }}</span></label>
             <label for="">Rating: <span>{{ bookItem.rating }}</span></label>

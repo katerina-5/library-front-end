@@ -13,16 +13,16 @@ export class AuthorsCatalogComponent implements OnInit {
     {
       idAuthor: 1,
       url: '/author/17138/',
-      fullName: 'Jane Austen',
-      fullNameOriginal: '',
-      image: ''
+      fullName: 'Джейн Остин',
+      fullNameOriginal: 'Jane Austen',
+      image: 'http://readly.ru/public/media/authors/3/b/3b0801ae8bcdc27730e7385ea572cbf0_180x0.jpg'
     },
     {
       idAuthor: 2,
       url: '/author/2201/',
       fullName: 'Sharlott Bronte',
       fullNameOriginal: '',
-      image: ''
+      image: 'http://readly.ru/public/media/authors/f/a/fade361ab0f109ca8e3d4d511a63de91_180x0.jpg'
     },
     {
       idAuthor: 3,
