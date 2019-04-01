@@ -1,21 +1,16 @@
-header, footer {
-    /* background-color: #80deea; */
+header {
+    /* general */
     background-color: #163b4d;
     width: 100%;
     height: 50px;
     left: 0;
     display: flex;
     justify-content: space-around;
-    /* justify-content: space-between; */
-}
-
-header > span,
-footer > span {
-    color: white;
-}
-
-header > span {
-    font-size: 20px;
+    /* only for header */
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    top: 0;
 }
 
 .logo__title {
@@ -24,66 +19,25 @@ header > span {
     align-items: center;
 }
 
-.information {
-    color: white;
-    font-size: 20px;
-}
-
-header {
-    width: 100%;
-    overflow: hidden;
-
-    /* justify-content: space-around; */
-    align-items: center;
-    top: 0;
-    /* position: fixed; */
-}
-
-footer {
-    /* justify-content: center; */
-    /* align-items: flex-end; */
-    bottom: 0;
-    /* position: fixed; */
-}
-
 .logo__img {
     width: 50px;
     height: 50px;
 }
 
-.main {
-    text-align: center;
-    /* margin-top: 50px; */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.functions {
-    text-align: left;
-}
-
-.img__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-img {
-    border-radius: 10px;
+header > span,
+.main__page {
+    color: white;
+    font-size: 20px;
 }
 
 .link {
     color: white;
+    font-size: 16px;
 }
 
 a:hover {
     background-color: rgb(214, 214, 206);
     color: black;
-    /* opacity: 10px; */
     transition: all 0.5s ease-out;
 }
 
