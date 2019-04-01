@@ -14,6 +14,8 @@
 	transition: width .2s;
 }
 
+/* 4 item-cards in a row */
+
 @media only screen and (min-width: 450px) {
 	.item__wrapper {
 		width: 50%;
@@ -31,6 +33,32 @@
 		width: 25%;
 	}
 }
+
+/* 5 item-cards in a row */
+
+/* @media only screen and (min-width: 300px) {
+	.item__wrapper {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 450px) {
+	.item__wrapper {
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.item__wrapper {
+		width: 30%;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.item__wrapper {
+		width: 20%;
+	}
+} */
 
 .item {
 	display: block;
