@@ -4,7 +4,8 @@
   <div class="main">
     <div class="search">
       <mat-form-field>
-        <input matInput class=" search__field" #search_request type="text" placeholder="Search" />
+        <input matInput class=" search__field" (keypress)="pressEnter($event)" #search_request type="text"
+          placeholder="Search" />
         <mat-icon class="search__btn" matSuffix (click)="search(search_request.value)">search</mat-icon>
       </mat-form-field>
     </div>

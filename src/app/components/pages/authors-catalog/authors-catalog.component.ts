@@ -59,4 +59,14 @@ export class AuthorsCatalogComponent implements OnInit {
     alert(message);
   }
 
+  pressEnter(event) {
+    let message = '';
+    if (event.key === 'Enter') {
+      // this.search(event.target.value);
+      message += 'Enter button was pressed\n';
+      message += 'Search request: ' + event.target.value;
+      alert(message);
+    }
+  }
+
 }
