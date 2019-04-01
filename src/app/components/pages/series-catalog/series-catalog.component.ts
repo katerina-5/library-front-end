@@ -13,17 +13,20 @@ export class SeriesCatalogComponent implements OnInit {
     {
       idSerie: 1,
       title: 'Властелин колец',
-      url: '/serie/368/'
+      url: '/serie/368/',
+      description: ''
     },
     {
       idSerie: 2,
       title: 'Гарри Поттер',
-      url: '/serie/220/'
+      url: '/serie/220/',
+      description: ''
     },
     {
       idSerie: 3,
       title: 'Остап Бендер',
-      url: '/serie/1378/'
+      url: '/serie/1378/',
+      description: ''
     }
   ];
 

@@ -4,4 +4,5 @@ export class Serie {
     idSerie: number; // integer
     title: string;
     url: string;
+    description: string;
 }

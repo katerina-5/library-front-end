@@ -13,27 +13,32 @@ export class GenresCatalogComponent implements OnInit {
     {
       idGenre: 1,
       title: 'Классика',
-      url: '/genre/180/'
+      url: '/genre/180/',
+      description: ''
     },
     {
       idGenre: 2,
       title: 'Экранизация',
-      url: '/genre/195/'
+      url: '/genre/195/',
+      description: ''
     },
     {
       idGenre: 3,
       title: 'Романы',
-      url: '/genre/242/'
+      url: '/genre/242/',
+      description: ''
     },
     {
       idGenre: 4,
       title: 'Литература 19 века',
-      url: '/genre/52/'
+      url: '/genre/52/',
+      description: ''
     },
     {
       idGenre: 5,
       title: 'Зарубежная классика',
-      url: '/genre/58/'
+      url: '/genre/58/',
+      description: ''
     }
   ];
 

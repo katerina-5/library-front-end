@@ -3,5 +3,7 @@ export class Author {
 
     idAuthor: number; // integer
     fullName: string;
+    fullNameOriginal: string;
     url: string;
+    image: string;
 }

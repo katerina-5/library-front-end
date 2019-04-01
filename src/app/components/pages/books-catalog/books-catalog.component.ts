@@ -25,12 +25,15 @@ export class BooksCatalogComponent implements OnInit {
       genres: [{
         idGenre: 5,
         title: 'classic',
-        url: 'http://readly.ru/genre/12345'
+        url: 'http://readly.ru/genre/12345',
+        description: ''
       }],
       authors: [{
         idAuthor: 1,
         fullName: 'Jane Austen',
-        url: 'http://readly.ru/author/12345'
+        url: 'http://readly.ru/author/12345',
+        fullNameOriginal: '',
+        image: ''
       }]
     },
     {
@@ -45,12 +48,15 @@ export class BooksCatalogComponent implements OnInit {
       genres: [{
         idGenre: 5,
         title: 'classic',
-        url: 'http://readly.ru/genre/180'
+        url: 'http://readly.ru/genre/180',
+        description: ''
       }],
       authors: [{
         idAuthor: 1,
         fullName: 'Jane Austen',
-        url: 'http://readly.ru/author/17138/'
+        url: 'http://readly.ru/author/17138/',
+        fullNameOriginal: '',
+        image: ''
       }]
     },
     {
@@ -65,12 +71,15 @@ export class BooksCatalogComponent implements OnInit {
       genres: [{
         idGenre: 5,
         title: 'classic',
-        url: 'http://readly.ru/genre/180'
+        url: 'http://readly.ru/genre/180',
+        description: ''
       }],
       authors: [{
         idAuthor: 1,
         fullName: 'Jane Austen',
-        url: 'http://readly.ru/author/17138/'
+        url: 'http://readly.ru/author/17138/',
+        fullNameOriginal: '',
+        image: ''
       }]
     },
     {
@@ -85,12 +94,15 @@ export class BooksCatalogComponent implements OnInit {
       genres: [{
         idGenre: 5,
         title: 'classic',
-        url: 'http://readly.ru/genre/180'
+        url: 'http://readly.ru/genre/180',
+        description: ''
       }],
       authors: [{
         idAuthor: 1,
         fullName: 'Jane Austen',
-        url: 'http://readly.ru/author/17138/'
+        url: 'http://readly.ru/author/17138/',
+        fullNameOriginal: '',
+        image: ''
       }]
     },
     {
@@ -105,12 +117,15 @@ export class BooksCatalogComponent implements OnInit {
       genres: [{
         idGenre: 5,
         title: 'classic',
-        url: 'http://readly.ru/genre/180'
+        url: 'http://readly.ru/genre/180',
+        description: ''
       }],
       authors: [{
         idAuthor: 1,
         fullName: 'Jane Austen',
-        url: 'http://readly.ru/author/17138/'
+        url: 'http://readly.ru/author/17138/',
+        fullNameOriginal: '',
+        image: ''
       }]
     }
   ];

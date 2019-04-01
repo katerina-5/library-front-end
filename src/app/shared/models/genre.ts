@@ -4,4 +4,5 @@ export class Genre {
     idGenre: number; // integer
     title: string;
     url: string;
+    description: string;
 }
