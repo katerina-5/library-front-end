@@ -15,12 +15,16 @@ import { AdminEditingModeComponent } from './components/pages/admin-editing-mode
 import { SeriesCatalogComponent } from './components/pages/series-catalog/series-catalog.component';
 import { BookItemComponent } from './components/pages/books-catalog/book-item/book-item.component';
 import { AuthorItemComponent } from './components/pages/authors-catalog/author-item/author-item.component';
+import { GenreItemComponent } from './components/pages/genres-catalog/genre-item/genre-item.component';
+import { SerieItemComponent } from './components/pages/series-catalog/serie-item/serie-item.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
   { path: 'books', component: BooksCatalogComponent },
   { path: 'book-details/:id', component: BookItemComponent },
   { path: 'author-details/:id', component: AuthorItemComponent },
+  { path: 'genre-details/:id', component: GenreItemComponent },
+  { path: 'serie-details/:id', component: SerieItemComponent },
   { path: 'authors', component: AuthorsCatalogComponent },
   { path: 'genres', component: GenresCatalogComponent },
   { path: 'series', component: SeriesCatalogComponent },

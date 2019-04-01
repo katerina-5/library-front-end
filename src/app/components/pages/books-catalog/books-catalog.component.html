@@ -2,25 +2,12 @@
   <app-header></app-header>
 
   <div class="main">
-    <!-- <div class="search">
-      <input class="search__input" type="text" #search_request_1 placeholder="Search..." />
-      <button class="search__btn" (click)="search(search_request_1.value)" type="submit">
-        <mat-icon>search</mat-icon>
-      </button>
-    </div> -->
-
-    <div class="another__search">
+    <div class="search">
       <mat-form-field>
         <input matInput class=" search__field" #search_request type="text" placeholder="Search" />
-        <mat-icon class="btn__search" matSuffix (click)="search(search_request.value)">search</mat-icon>
+        <mat-icon class="search__btn" matSuffix (click)="search(search_request.value)">search</mat-icon>
       </mat-form-field>
     </div>
-
-    <!-- <p style="font-weight: bold; color: red;">Books catalog!</p> -->
-    <!-- <ul>
-      <li *ngFor="let book of books">{{ book }}</li>
-    </ul> -->
-    <!-- <app-book-item class="book__item" *ngFor="let book of books" [bookItem]="book"></app-book-item> -->
 
     <ul class="items">
       <li class="item__wrapper" *ngFor="let book of books">
@@ -30,33 +17,6 @@
           <div class="item__photo">
             <img src="{{ book.image }}" alt="">
           </div>
-
-          <!-- <app-book-item [bookItem]="book"></app-book-item> -->
-
-          <!-- <div class="title">
-            <h1>{{ book.title }}</h1>
-          </div>
-          <div class="information">
-            <div class="fields">
-              <label for="">Url: <a href="http://readly.ru{{ book.url }}">readly.ru{{ book.url }}</a></label>
-              <label for="" *ngIf="book.serie != null; else serieIsNull">Serie:
-                <span>{{ book.serie }}</span></label>
-              <ng-template #serieIsNull><label for="">Serie: <span>none</span></label></ng-template>
-              <label for="">Authors: <ul>
-                  <li *ngFor="let author of book.authors"><a href="{{ author.url }}">{{ author.fullName }}</a></li>
-                </ul></label>
-              <label for="">Genres: <ul>
-                  <li *ngFor="let genre of book.genres">{{ genre.title }} - {{ genre.url }}</li>
-                </ul></label>
-              <label for="">Year: <span>{{ book.year }}</span></label>
-              <label for="">Rating: <span>{{ book.rating }}</span></label>
-              <label for="">Description: <p>{{ book.description }}</p></label>
-            </div>
-
-            <div class="image">
-              <img src="{{ book.image }}" alt="">
-            </div>
-          </div> -->
         </div>
       </li>
     </ul>

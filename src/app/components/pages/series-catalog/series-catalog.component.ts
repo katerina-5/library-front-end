@@ -35,4 +35,11 @@ export class SeriesCatalogComponent implements OnInit {
   ngOnInit() {
   }
 
+  search(searchRequest) {
+    let message = '';
+    message += 'Search button was pressed\n';
+    message += 'Search request: ' + searchRequest;
+    alert(message);
+  }
+
 }

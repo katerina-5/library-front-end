@@ -1,15 +1,21 @@
-<div>
-  <div class="item">
-    <mat-card>
-      <div class="title">
-        <h1>{{ genreItem.title }}</h1>
-      </div>
-      <div class="information">
-        <div class="fields">
-          <label for="">Url: <a href="http://readly.ru{{ genreItem.url }}">readly.ru{{ genreItem.url }}</a></label>
-          <label for="">Description: <p>{{ genreItem.description }}</p></label>
+<div class="wrapper">
+  <app-header></app-header>
+
+  <div class="main">
+    <div class="item">
+      <mat-card>
+        <div class="title">
+          <h1>{{ genreItem.title }}</h1>
         </div>
-      </div>
-    </mat-card>
+        <div class="information">
+          <div class="fields">
+            <label for="">Url: <a href="http://readly.ru{{ genreItem.url }}">readly.ru{{ genreItem.url }}</a></label>
+            <label for="">Description: <p>{{ genreItem.description }}</p></label>
+          </div>
+        </div>
+      </mat-card>
+    </div>
   </div>
+
+  <app-footer></app-footer>
 </div>

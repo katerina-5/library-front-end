@@ -3,17 +3,19 @@
 
   <div class="main">
     <div class="search">
-      <input class="search__input" type="text" placeholder="Search..." />
-      <button class="search__btn" (click)="search()" type="submit">
-        <mat-icon>search</mat-icon>
-      </button>
+      <mat-form-field>
+        <input matInput class=" search__field" #search_request type="text" placeholder="Search" />
+        <mat-icon class="search__btn" matSuffix (click)="search(search_request.value)">search</mat-icon>
+      </mat-form-field>
     </div>
 
-    <p style="font-weight: bold; color: red;">Genres catalog!</p>
-    <!-- <ul>
-      <li *ngFor="let genre of genres">{{ genre }}</li>
-    </ul> -->
-    <app-genre-item class="genre__item" *ngFor="let genre of genres" [genreItem]="genre"></app-genre-item>
+    <ul class="items">
+      <li class="item__wrapper" *ngFor="let genre of genres">
+        <div class="item little">
+          <a [routerLink]="['/genre-details', genre.idGenre]">{{ genre.title }}</a>
+        </div>
+      </li>
+    </ul>
   </div>
 
   <app-footer></app-footer>

@@ -2,25 +2,12 @@
   <app-header></app-header>
 
   <div class="main">
-    <!-- <div class="search">
-      <input class="search__input" type="text" placeholder="Search..." />
-      <button class="search__btn" (click)="search()" type="submit">
-        <mat-icon>search</mat-icon>
-      </button>
-    </div> -->
-
-    <div class="another__search">
+    <div class="search">
       <mat-form-field>
         <input matInput class=" search__field" #search_request type="text" placeholder="Search" />
-        <mat-icon class="btn__search" matSuffix (click)="search(search_request.value)">search</mat-icon>
+        <mat-icon class="search__btn" matSuffix (click)="search(search_request.value)">search</mat-icon>
       </mat-form-field>
     </div>
-
-    <!-- <p style="font-weight: bold; color: red;">Authors catalog!</p> -->
-    <!-- <ul>
-      <li *ngFor="let author of authors">{{ author }}</li>
-    </ul> -->
-    <!-- <app-author-item class="author__item" *ngFor="let author of authors" [authorItem]="author"></app-author-item> -->
 
     <ul class="items">
       <li class="item__wrapper" *ngFor="let author of authors">
