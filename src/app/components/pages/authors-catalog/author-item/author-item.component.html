@@ -5,15 +5,22 @@
     <div class="item">
       <mat-card>
         <div class="title">
+          <blockquote class="entity__name">AUTHOR</blockquote>
           <h1>{{ authorItem.fullName }}</h1>
         </div>
         <div class="information">
+          <div class="image">
+            <img src="{{ authorItem.image }}" alt="">
+          </div>
+
           <div class="fields">
             <label for="">Original name: <span>{{ authorItem.fullNameOriginal }}</span></label>
             <label for="">Url: <a href="http://readly.ru{{ authorItem.url }}">readly.ru{{ authorItem.url }}</a></label>
-          </div>
-          <div class="image">
-            <img src="{{ authorItem.image }}" alt="">
+            <label for="">Genres:
+              <ul>
+                <li *ngFor="let genre of authorItem.genres"><a href="{{ genre.url }}">{{ genre.title }}</a></li>
+              </ul>
+            </label>
           </div>
         </div>
       </mat-card>
