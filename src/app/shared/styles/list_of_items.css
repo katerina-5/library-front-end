@@ -16,7 +16,7 @@
 
 /* 4 item-cards in a row */
 
-@media only screen and (min-width: 450px) {
+/* @media only screen and (min-width: 450px) {
 	.item__wrapper {
 		width: 50%;
 	}
@@ -32,11 +32,11 @@
 	.item__wrapper {
 		width: 25%;
 	}
-}
+} */
 
 /* 5 item-cards in a row */
 
-/* @media only screen and (min-width: 300px) {
+@media only screen and (min-width: 300px) {
 	.item__wrapper {
 		width: 50%;
 	}
@@ -58,7 +58,7 @@
 	.item__wrapper {
 		width: 20%;
 	}
-} */
+}
 
 .item {
 	display: block;
@@ -72,7 +72,7 @@
     text-align: center;
 	color: #474747;
 	z-index: 0;
-	height: 400px;
+	height: 350px;
 }
 
 .little {
