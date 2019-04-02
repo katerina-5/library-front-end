@@ -34,9 +34,9 @@ const routes: Routes = [
   { path: 'admin/sign_in', component: AdminSignInComponent },
   { path: 'admin/main_page', component: AdminMainPageComponent },
   { path: 'admin/editing_mode', component: AdminEditingModeComponent },
-  { path: 'error', component: NotFoundComponent },
+  { path: 'not_found', component: NotFoundComponent },
   { path: 'admin', redirectTo: 'admin/sign_in', pathMatch: 'full' },
-  { path: '**', redirectTo: 'error', pathMatch: 'full' }
+  { path: '**', redirectTo: 'not_found', pathMatch: 'full' }
 ];
 
 @NgModule({
