@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -22,9 +23,25 @@ export class HeaderComponent implements OnInit {
   signUp = 'Sign up';
   // signUp = 'Зареєструватися';
 
-  constructor() { }
+  isToken = false;
+
+  constructor(private router: Router) {
+    if (localStorage.getItem('token') !== null) {
+      this.isToken = true;
+      this.signIn = 'Profile';
+      this.signUp = 'Sign out';
+    }
+  }
 
   ngOnInit() {
+  }
+
+  signOut() {
+    localStorage.removeItem('token');
+    this.isToken = false;
+    this.signIn = 'Sign in';
+    this.signUp = 'Sign up';
+    this.router.navigate(['/sign_in']);
   }
 
 }

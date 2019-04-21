@@ -13,7 +13,14 @@
   </div>
 
   <div>
-    <a class="link" mat-button href="/sign_in">{{ signIn }}</a>
-    <a class="link" mat-button href="/sign_up">{{ signUp }}</a>
+    <div *ngIf="isToken; then isAuthUser else notAuthUser"></div>
+    <ng-template #notAuthUser>
+      <a class="link" mat-button href="/sign_in">{{ signIn }}</a>
+      <a class="link" mat-button href="/sign_up">{{ signUp }}</a>
+    </ng-template>
+    <ng-template #isAuthUser>
+      <a class="link" mat-button href="/user_profile">{{ signIn }}</a>
+      <button class="link" mat-button (click)="signOut()">{{ signUp }}</button>
+    </ng-template>
   </div>
 </header>
