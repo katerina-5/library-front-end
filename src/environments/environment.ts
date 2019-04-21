@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  // begin of URL of readly.ru
+  url: 'http://readly.ru',
+
+  // URL of development API
+  apiUrl: 'http://localhost:3000'
 };
 
 /*
