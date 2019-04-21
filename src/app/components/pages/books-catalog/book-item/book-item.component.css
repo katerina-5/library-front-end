@@ -1,2 +1,10 @@
 @import './../../../../shared/styles/catalog.css';
 @import './../../../../shared/styles/item_card.css';
+
+.main {
+    overflow-y: scroll;
+}
+
+.item {
+    min-height: 450px;
+}

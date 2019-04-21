@@ -6,26 +6,26 @@
       <mat-card>
         <div class="title">
           <blockquote class="entity__name">BOOK</blockquote>
-          <h1>{{ bookItem.title }}</h1>
+          <h1>{{ bookItem.title_book }}</h1>
         </div>
         <div class="information">
           <div class="image">
-            <img src="{{ bookItem.image }}" alt="">
+            <img src="{{ beginOfUrl }}{{ bookItem.image_url }}" alt="">
           </div>
 
           <div class="fields">
-            <label for="">Url: <a href="http://readly.ru{{ bookItem.url }}">readly.ru{{ bookItem.url }}</a></label>
-            <label for="" *ngIf="bookItem.serie != null; else serieIsNull">Serie:
-              <!-- <span>{{ bookItem.serie }}</span> -->
-              <a href="{{ bookItem.serie.url }}">{{ bookItem.serie }}</a>
+            <label>Url: <a href="{{ beginOfUrl }}{{ bookItem.url_book }}">
+                {{ beginOfUrl }}{{ bookItem.url_book }}</a></label>
+            <label for="" *ngIf="bookItem.id_serie != null; else serieIsNull">Serie:
+              <a href="{{ bookItem.id_serie }}">{{ bookItem.id_serie }}</a>
             </label>
             <ng-template #serieIsNull><label for="">Serie: <span>none</span></label></ng-template>
-            <label for="">Authors: <ul>
+            <!-- <label for="">Authors: <ul>
                 <li *ngFor="let author of bookItem.authors"><a href="{{ author.url }}">{{ author.fullName }}</a></li>
               </ul></label>
             <label for="">Genres: <ul>
                 <li *ngFor="let genre of bookItem.genres"><a href="{{ genre.url }}">{{ genre.title }}</a></li>
-              </ul></label>
+              </ul></label> -->
             <label for="">Year: <span>{{ bookItem.year }}</span></label>
             <label for="">Rating: <span>{{ bookItem.rating }}</span></label>
             <label for="">Description: <p>{{ bookItem.description }}</p></label>
@@ -65,6 +65,27 @@
             </div> -->
       </mat-card>
     </div>
+
+    <!-- <div class="item">
+      <mat-card>
+        <div class="title">
+          <blockquote class="entity__name">BOOK</blockquote>
+          <h1>{{ bookItem.title_book }}</h1>
+        </div>
+        <div class="information">
+          <div class="image">
+            <img src="http://readly.ru{{ bookItem.image_url }}" alt="">
+          </div>
+          <div class="fields">
+            <label for="">Url: <a
+                href="http://readly.ru{{ bookItem.url_book }}">readly.ru{{ bookItem.url_book }}</a></label>
+            <label for="">Year: <span>{{ bookItem.year }}</span></label>
+            <label for="">Rating: <span>{{ bookItem.rating }}</span></label>
+            <label for="">Description: <p>{{ bookItem.description }}</p></label>
+          </div>
+        </div>
+      </mat-card>
+    </div> -->
   </div>
 
   <app-footer></app-footer>
