@@ -24,6 +24,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { HttpClientModule } from '@angular/common/http';
 
 // component modules
 import { AppRoutingModule } from './app-routing.module';
@@ -98,7 +99,8 @@ import { SerieItemComponent } from './components/pages/series-catalog/serie-item
     MatDialogModule,
     MatTooltipModule,
     MatSelectModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
