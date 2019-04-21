@@ -10,13 +10,23 @@
       </mat-form-field>
     </div>
 
+    <!-- <ul class="items">
+      <li class="item__wrapper" *ngFor="let book of books">
+        <div class="item">
+          <a [routerLink]="['/book-details', book.id_book]">{{ book.title_book }}</a>
+          <br>
+          <a href="http://readly.ru{{ book.url_book }}">http://readly.ru{{ book.url_book }}</a>
+        </div>
+      </li>
+    </ul> -->
+
     <ul class="items">
       <li class="item__wrapper" *ngFor="let book of books">
         <div class="item">
-          <!-- <a href="http://readly.ru{{ book.url }}">{{ book.title }} (by {{ book.authors[0].fullName }})</a> -->
-          <a [routerLink]="['/book-details', book.idBook]">{{ book.title }} (by {{ book.authors[0].fullName }})</a>
+          <!-- <a [routerLink]="['/book-details', book.id_book]">{{ book.title_book }} (by {{ book.authors[0].fullName }})</a> -->
+          <a [routerLink]="['/book-details', book.id_book]">{{ book.title_book }}</a>
           <div class="item__photo">
-            <img src="{{ book.image }}" alt="">
+            <img src="http://readly.ru{{ book.image_url }}" alt="">
           </div>
         </div>
       </li>
