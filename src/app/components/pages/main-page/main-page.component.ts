@@ -8,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class MainPageComponent implements OnInit {
   title = 'service \"ToReadList\" for search in library';
 
-  constructor() { }
+  constructor() {
+    // ONLY FOR TEST !!!!!
+    if (localStorage.getItem('token') !== null) {
+      this.title = 'authored user';
+    }
+  }
 
   ngOnInit() {
   }
