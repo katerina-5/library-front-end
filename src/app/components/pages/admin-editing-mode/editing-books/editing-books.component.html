@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <app-admin-navbar></app-admin-navbar>
+
+  <div class="main">
+    <h1>Editing books catalog</h1>
+
+    <div>
+      <h2>Add new url of book for parsing:</h2>
+      <input matInput (keypress)="pressEnter($event)" #parse_book type="text" placeholder="Book url" />
+      <button mat-raised-button (click)="parseBook(parse_book.value)">Parse book</button>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,12 @@
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    margin: 0;
+    height: calc(100vh - 2*50px);
+    text-align: center;
+}

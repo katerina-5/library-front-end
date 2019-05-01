@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-admin-editing-mode',
@@ -8,24 +7,9 @@ import { ApiService } from 'src/app/shared/services/api.service';
 })
 export class AdminEditingModeComponent implements OnInit {
 
-  constructor(private dataSource: ApiService) { }
+  constructor() { }
 
   ngOnInit() {
-  }
-
-  pressEnter(event) {
-    let url = '';
-    if (event.key === 'Enter') {
-      url = event.target.value;
-      this.parseBook(url);
-    }
-  }
-
-  parseBook(url) {
-    this.dataSource.parseBook(url)
-      .subscribe((data: any) => {
-        console.log(data);
-      });
   }
 
 }
