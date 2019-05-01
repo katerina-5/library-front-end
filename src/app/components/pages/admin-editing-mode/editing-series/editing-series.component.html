@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <app-admin-navbar></app-admin-navbar>
+
+    <div class="main">
+        <h1>Editing book series catalog</h1>
+
+        <br>
+
+        <h2>Add new url of book serie for parsing:</h2>
+        <div class="url__input">
+            <mat-form-field>
+                <input matInput (keypress)="pressEnter($event)" #parse_serie type="text" placeholder="Book serie url" />
+            </mat-form-field>
+            <button mat-raised-button (click)="parseSerie(parse_serie.value)">Parse book serie</button>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

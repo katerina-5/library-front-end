@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <app-admin-navbar></app-admin-navbar>
+
+    <div class="main">
+        <h1>Editing authors catalog</h1>
+
+        <br>
+
+        <h2>Add new url of author for parsing:</h2>
+        <div class="url__input">
+            <mat-form-field>
+                <input matInput (keypress)="pressEnter($event)" #parse_author type="text" placeholder="Author url" />
+            </mat-form-field>
+            <button mat-raised-button (click)="parseAuthor(parse_author.value)">Parse auhtor</button>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-editing-genres',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditingGenresComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataSource: ApiService) { }
 
   ngOnInit() {
+  }
+
+  pressEnter(event) {
+    let url = '';
+    if (event.key === 'Enter') {
+      url = event.target.value;
+      this.parseGenre(url);
+    }
+  }
+
+  parseGenre(url) {
+    this.dataSource.parseGenre(url)
+      .subscribe((data: any) => {
+        console.log(data);
+      });
   }
 
 }
