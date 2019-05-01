@@ -49,6 +49,9 @@ import { AuthorItemComponent } from './components/pages/authors-catalog/author-i
 import { GenreItemComponent } from './components/pages/genres-catalog/genre-item/genre-item.component';
 import { SerieItemComponent } from './components/pages/series-catalog/serie-item/serie-item.component';
 import { EditingBooksComponent } from './components/pages/admin-editing-mode/editing-books/editing-books.component';
+import { EditingAuthorsComponent } from './components/pages/admin-editing-mode/editing-authors/editing-authors.component';
+import { EditingGenresComponent } from './components/pages/admin-editing-mode/editing-genres/editing-genres.component';
+import { EditingSeriesComponent } from './components/pages/admin-editing-mode/editing-series/editing-series.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +75,10 @@ import { EditingBooksComponent } from './components/pages/admin-editing-mode/edi
     AuthorItemComponent,
     GenreItemComponent,
     SerieItemComponent,
-    EditingBooksComponent
+    EditingBooksComponent,
+    EditingAuthorsComponent,
+    EditingGenresComponent,
+    EditingSeriesComponent
   ],
   imports: [
     BrowserModule,
