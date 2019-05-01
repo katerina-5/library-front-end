@@ -39,9 +39,9 @@ const routes: Routes = [
   { path: 'admin/main_page', component: AdminMainPageComponent },
   { path: 'admin/editing_mode', component: AdminEditingModeComponent },
   { path: 'admin/edit_books', component: EditingBooksComponent },
-  { path: 'admin/edit_authors', component: EditingBooksComponent },
-  { path: 'admin/edit_genres', component: EditingBooksComponent },
-  { path: 'admin/edit_series', component: EditingBooksComponent },
+  { path: 'admin/edit_authors', component: EditingAuthorsComponent },
+  { path: 'admin/edit_genres', component: EditingGenresComponent },
+  { path: 'admin/edit_series', component: EditingSeriesComponent },
   { path: 'not_found', component: NotFoundComponent },
   { path: 'admin', redirectTo: 'admin/sign_in', pathMatch: 'full' },
   { path: '**', redirectTo: 'not_found', pathMatch: 'full' }
