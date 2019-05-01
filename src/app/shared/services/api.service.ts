@@ -30,6 +30,30 @@ export class ApiService {
       });
   }
 
+  parseAuthor(url): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/parser/author',
+      {
+        url: url
+      });
+  }
+
+  parseGenre(url): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/parser/genre',
+      {
+        url: url
+      });
+  }
+
+  parseSerie(url): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/parser/serie',
+      {
+        url: url
+      });
+  }
+
   signIn(loginStr, passwordStr): Observable<Object> {
     return this.http.post(
       environment.apiUrl + '/auth',
