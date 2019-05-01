@@ -4,9 +4,13 @@
   <div class="main">
     <h1>Editing books catalog</h1>
 
-    <div>
-      <h2>Add new url of book for parsing:</h2>
-      <input matInput (keypress)="pressEnter($event)" #parse_book type="text" placeholder="Book url" />
+    <br>
+
+    <h2>Add new url of book for parsing:</h2>
+    <div class="url__input">
+      <mat-form-field>
+        <input matInput (keypress)="pressEnter($event)" #parse_book type="text" placeholder="Book url" />
+      </mat-form-field>
       <button mat-raised-button (click)="parseBook(parse_book.value)">Parse book</button>
     </div>
   </div>
