@@ -10,11 +10,11 @@
         </div>
         <div class="information">
           <div class="image">
-            <img src="{{ beginOfUrl }}{{ bookItem.image_url }}" alt="">
+            <img src="{{ bookItem.image_url }}" alt="">
           </div>
 
           <div class="fields">
-            <label>Url: <a href="{{ beginOfUrl }}{{ bookItem.url_book }}">
+            <label>Url: <a href="{{ bookItem.url_book }}">
                 {{ beginOfUrl }}{{ bookItem.url_book }}</a></label>
             <label for="" *ngIf="bookItem.id_serie != null; else serieIsNull">Serie:
               <a href="{{ bookItem.id_serie }}">{{ bookItem.id_serie }}</a>

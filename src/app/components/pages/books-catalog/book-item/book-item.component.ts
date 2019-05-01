@@ -145,7 +145,7 @@ export class BookItemComponent implements OnInit {
   // bookItem: any;
   id: number;
 
-  beginOfUrl: string = environment.url;
+  // beginOfUrl: string = environment.url;
 
   constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
     // this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
@@ -164,13 +164,8 @@ export class BookItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.id = Number.parseInt(this.activateRoute.snapshot.params['id'], 5);
+    this.id = Number.parseFloat(this.activateRoute.snapshot.params['id']);
     console.log(this.id);
-    // this.books.forEach(book => {
-    //   if (book.idBook === this.id) {
-    //     this.bookItem = book;
-    //   }
-    // });
 
     this.dataSource.getBookById(this.id)
       .subscribe((data: any) => {
