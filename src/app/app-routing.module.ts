@@ -17,6 +17,7 @@ import { BookItemComponent } from './components/pages/books-catalog/book-item/bo
 import { AuthorItemComponent } from './components/pages/authors-catalog/author-item/author-item.component';
 import { GenreItemComponent } from './components/pages/genres-catalog/genre-item/genre-item.component';
 import { SerieItemComponent } from './components/pages/series-catalog/serie-item/serie-item.component';
+import { EditingBooksComponent } from './components/pages/admin-editing-mode/editing-books/editing-books.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'admin/sign_in', component: AdminSignInComponent },
   { path: 'admin/main_page', component: AdminMainPageComponent },
   { path: 'admin/editing_mode', component: AdminEditingModeComponent },
+  { path: 'admin/edit_books', component: EditingBooksComponent },
   { path: 'not_found', component: NotFoundComponent },
   { path: 'admin', redirectTo: 'admin/sign_in', pathMatch: 'full' },
   { path: '**', redirectTo: 'not_found', pathMatch: 'full' }

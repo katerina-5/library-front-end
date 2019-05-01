@@ -48,6 +48,7 @@ import { BookItemComponent } from './components/pages/books-catalog/book-item/bo
 import { AuthorItemComponent } from './components/pages/authors-catalog/author-item/author-item.component';
 import { GenreItemComponent } from './components/pages/genres-catalog/genre-item/genre-item.component';
 import { SerieItemComponent } from './components/pages/series-catalog/serie-item/serie-item.component';
+import { EditingBooksComponent } from './components/pages/admin-editing-mode/editing-books/editing-books.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { SerieItemComponent } from './components/pages/series-catalog/serie-item
     BookItemComponent,
     AuthorItemComponent,
     GenreItemComponent,
-    SerieItemComponent
+    SerieItemComponent,
+    EditingBooksComponent
   ],
   imports: [
     BrowserModule,
