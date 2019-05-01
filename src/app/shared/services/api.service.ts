@@ -22,6 +22,14 @@ export class ApiService {
     );
   }
 
+  parseBook(url): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/parser/book',
+      {
+        url: url
+      });
+  }
+
   signIn(loginStr, passwordStr): Observable<Object> {
     return this.http.post(
       environment.apiUrl + '/auth',
