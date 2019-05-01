@@ -26,7 +26,7 @@
           <!-- <a [routerLink]="['/book-details', book.id_book]">{{ book.title_book }} (by {{ book.authors[0].fullName }})</a> -->
           <a [routerLink]="['/book-details', book.id_book]">{{ book.title_book }}</a>
           <div class="item__photo">
-            <img src="http://readly.ru{{ book.image_url }}" alt="">
+            <img src="{{ book.image_url }}" alt="">
           </div>
         </div>
       </li>
