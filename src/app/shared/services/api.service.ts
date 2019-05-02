@@ -58,6 +58,42 @@ export class ApiService {
     );
   }
 
+  searchBooks(searchRequest): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/search/books',
+      {
+        search_request: searchRequest
+      }
+    );
+  }
+
+  searchAuthors(searchRequest): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/search/authors',
+      {
+        search_request: searchRequest
+      }
+    );
+  }
+
+  searchGenres(searchRequest): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/search/genres',
+      {
+        search_request: searchRequest
+      }
+    );
+  }
+
+  searchSeries(searchRequest): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/search/series',
+      {
+        search_request: searchRequest
+      }
+    );
+  }
+
   parseBook(url): Observable<Object> {
     return this.http.post(
       environment.apiUrl + '/parser/book',
