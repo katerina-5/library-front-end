@@ -154,10 +154,7 @@ export class BooksCatalogComponent implements OnInit {
 
       return;
     }
-    // let message = '';
-    // message += 'Search button was pressed\n';
-    // message += 'Search request: ' + searchRequest;
-    // alert(message);
+
     this.dataSource.searchBooks(searchRequest)
       .subscribe((data: any) => {
         console.log(data);
@@ -169,13 +166,6 @@ export class BooksCatalogComponent implements OnInit {
     if (event.key === 'Enter') {
       this.search(event.target.value);
     }
-    // let message = '';
-    // if (event.key === 'Enter') {
-    //   // this.search(event.target.value);
-    //   message += 'Enter button was pressed\n';
-    //   message += 'Search request: ' + event.target.value;
-    //   alert(message);
-    // }
   }
 
 }
