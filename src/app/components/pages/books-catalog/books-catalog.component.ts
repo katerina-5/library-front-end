@@ -166,6 +166,9 @@ export class BooksCatalogComponent implements OnInit {
   }
 
   pressEnter(event) {
+    if (event.key === 'Enter') {
+      this.search(event.target.value);
+    }
     // let message = '';
     // if (event.key === 'Enter') {
     //   // this.search(event.target.value);
@@ -173,7 +176,6 @@ export class BooksCatalogComponent implements OnInit {
     //   message += 'Search request: ' + event.target.value;
     //   alert(message);
     // }
-    this.search(event.target.value);
   }
 
 }
