@@ -22,6 +22,42 @@ export class ApiService {
     );
   }
 
+  getAuthors(): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + '/authors',
+    );
+  }
+
+  getAuthorById(id): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/authors/${id}`,
+    );
+  }
+
+  getGenres(): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + '/genres',
+    );
+  }
+
+  getGenreById(id): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/genres/${id}`,
+    );
+  }
+
+  getSeries(): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + '/series',
+    );
+  }
+
+  getSerieById(id): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/series/${id}`,
+    );
+  }
+
   parseBook(url): Observable<Object> {
     return this.http.post(
       environment.apiUrl + '/parser/book',
