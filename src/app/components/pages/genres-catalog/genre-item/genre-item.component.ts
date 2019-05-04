@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Genre } from 'src/app/shared/models/genre';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-genre-item',
@@ -46,17 +47,26 @@ export class GenreItemComponent implements OnInit {
   genreItem: Genre;
   id: number;
 
-  constructor(private activateRoute: ActivatedRoute) {
-    this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
-    console.log(this.id);
-    this.genres.forEach(genre => {
-      if (genre.idGenre === this.id) {
-        this.genreItem = genre;
-      }
-    });
+  constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
+    // this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
+    // console.log(this.id);
+    // this.genres.forEach(genre => {
+    //   if (genre.idGenre === this.id) {
+    //     this.genreItem = genre;
+    //   }
+    // });
   }
 
   ngOnInit() {
+    this.id = Number.parseFloat(this.activateRoute.snapshot.params['id']);
+    console.log(this.id);
+
+    this.dataSource.getGenreById(this.id)
+      .subscribe((data: any) => {
+        console.log(data);
+        this.genreItem = data[0];
+        console.log(this.genreItem);
+      });
   }
 
 }

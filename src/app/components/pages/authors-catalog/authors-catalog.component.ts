@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Author } from 'src/app/shared/models/author';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-authors-catalog',
@@ -47,9 +48,14 @@ export class AuthorsCatalogComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private dataSource: ApiService) { }
 
   ngOnInit() {
+    this.dataSource.getAuthors()
+      .subscribe((data: any) => {
+        console.log(data);
+        this.authors = data;
+      });
   }
 
   search(searchRequest) {

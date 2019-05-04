@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Serie } from 'src/app/shared/models/serie';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-serie-item',
@@ -34,17 +35,26 @@ export class SerieItemComponent implements OnInit {
   serieItem: Serie;
   id: number;
 
-  constructor(private activateRoute: ActivatedRoute) {
-    this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
-    console.log(this.id);
-    this.series.forEach(serie => {
-      if (serie.idSerie === this.id) {
-        this.serieItem = serie;
-      }
-    });
+  constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
+    // this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
+    // console.log(this.id);
+    // this.series.forEach(serie => {
+    //   if (serie.idSerie === this.id) {
+    //     this.serieItem = serie;
+    //   }
+    // });
   }
 
   ngOnInit() {
+    this.id = Number.parseFloat(this.activateRoute.snapshot.params['id']);
+    console.log(this.id);
+
+    this.dataSource.getSerieById(this.id)
+      .subscribe((data: any) => {
+        console.log(data);
+        this.serieItem = data[0];
+        console.log(this.serieItem);
+      });
   }
 
 }

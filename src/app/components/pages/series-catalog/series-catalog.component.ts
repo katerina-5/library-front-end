@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Serie } from 'src/app/shared/models/serie';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-series-catalog',
@@ -30,9 +31,14 @@ export class SeriesCatalogComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private dataSource: ApiService) { }
 
   ngOnInit() {
+    this.dataSource.getSeries()
+      .subscribe((data: any) => {
+        console.log(data);
+        this.series = data;
+      });
   }
 
   search(searchRequest) {

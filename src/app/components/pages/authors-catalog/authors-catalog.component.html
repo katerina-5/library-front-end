@@ -13,9 +13,9 @@
     <ul class="items">
       <li class="item__wrapper" *ngFor="let author of authors">
         <div class="item">
-          <a [routerLink]="['/author-details', author.idAuthor]">{{ author.fullName }}</a>
+          <a [routerLink]="['/author-details', author.id_author]">{{ author.full_name }}</a>
           <div class="item__photo">
-            <img src="{{ author.image }}" alt="">
+            <img src="{{ author.image_url }}" alt="">
           </div>
         </div>
       </li>

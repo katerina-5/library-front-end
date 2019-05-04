@@ -13,7 +13,7 @@
     <ul class="items">
       <li class="item__wrapper" *ngFor="let genre of genres">
         <div class="item little">
-          <a [routerLink]="['/genre-details', genre.idGenre]">{{ genre.title }}</a>
+          <a [routerLink]="['/genre-details', genre.id_genre]">{{ genre.title_genre }}</a>
         </div>
       </li>
     </ul>

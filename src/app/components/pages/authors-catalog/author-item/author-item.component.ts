@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Author } from 'src/app/shared/models/author';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-author-item',
@@ -51,17 +52,26 @@ export class AuthorItemComponent implements OnInit {
   authorItem: Author;
   id: number;
 
-  constructor(private activateRoute: ActivatedRoute) {
-    this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
-    console.log(this.id);
-    this.authors.forEach(author => {
-      if (author.idAuthor === this.id) {
-        this.authorItem = author;
-      }
-    });
+  constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
+    // this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
+    // console.log(this.id);
+    // this.authors.forEach(author => {
+    //   if (author.idAuthor === this.id) {
+    //     this.authorItem = author;
+    //   }
+    // });
   }
 
   ngOnInit() {
+    this.id = Number.parseFloat(this.activateRoute.snapshot.params['id']);
+    console.log(this.id);
+
+    this.dataSource.getAuthorById(this.id)
+      .subscribe((data: any) => {
+        console.log(data);
+        this.authorItem = data[0];
+        console.log(this.authorItem);
+      });
   }
 
 }

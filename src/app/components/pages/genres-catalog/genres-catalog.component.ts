@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Genre } from 'src/app/shared/models/genre';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-genres-catalog',
@@ -42,9 +43,14 @@ export class GenresCatalogComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private dataSource: ApiService) { }
 
   ngOnInit() {
+    this.dataSource.getGenres()
+      .subscribe((data: any) => {
+        console.log(data);
+        this.genres = data;
+      });
   }
 
   search(searchRequest) {

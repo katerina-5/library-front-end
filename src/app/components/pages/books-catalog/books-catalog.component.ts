@@ -159,7 +159,7 @@ export class BooksCatalogComponent implements OnInit {
       .subscribe((data: any) => {
         console.log(data);
         this.books = data;
-      })
+      });
   }
 
   pressEnter(event) {
