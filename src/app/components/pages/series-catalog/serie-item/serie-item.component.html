@@ -6,11 +6,11 @@
       <mat-card>
         <div class="title">
           <blockquote class="entity__name">BOOK SERIES</blockquote>
-          <h1>{{ serieItem.title }}</h1>
+          <h1>{{ serieItem.title_serie }}</h1>
         </div>
         <div class="information">
           <div class="fields">
-            <label for="">Url: <a href="http://readly.ru{{ serieItem.url }}">readly.ru{{ serieItem.url }}</a></label>
+            <label for="">Url: <a href="{{ serieItem.url_serie }}">{{ serieItem.url_serie }}</a></label>
             <label for="">Description: <p>{{ serieItem.description }}</p></label>
           </div>
         </div>

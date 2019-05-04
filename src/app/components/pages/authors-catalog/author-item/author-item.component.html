@@ -6,21 +6,21 @@
       <mat-card>
         <div class="title">
           <blockquote class="entity__name">AUTHOR</blockquote>
-          <h1>{{ authorItem.fullName }}</h1>
+          <h1>{{ authorItem.full_name }}</h1>
         </div>
         <div class="information">
           <div class="image">
-            <img src="{{ authorItem.image }}" alt="">
+            <img src="{{ authorItem.image_url }}" alt="">
           </div>
 
           <div class="fields">
-            <label for="">Original name: <span>{{ authorItem.fullNameOriginal }}</span></label>
-            <label for="">Url: <a href="http://readly.ru{{ authorItem.url }}">readly.ru{{ authorItem.url }}</a></label>
-            <label for="">Genres:
+            <label for="">Original name: <span>{{ authorItem.full_name_orig }}</span></label>
+            <label for="">Url: <a href="{{ authorItem.url_author }}">{{ authorItem.url_author }}</a></label>
+            <!-- <label for="">Genres:
               <ul>
                 <li *ngFor="let genre of authorItem.genres"><a href="{{ genre.url }}">{{ genre.title }}</a></li>
               </ul>
-            </label>
+            </label> -->
           </div>
         </div>
       </mat-card>
