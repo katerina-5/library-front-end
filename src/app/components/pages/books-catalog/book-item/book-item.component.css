@@ -2,9 +2,21 @@
 @import './../../../../shared/styles/item_card.css';
 
 .main {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .item {
     min-height: 450px;
+}
+
+.relation__block {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.genres,
+.authors {
+    display: flex;
+    flex-direction: column;
 }

@@ -17,7 +17,7 @@
             <label>Url: <a href="{{ bookItem.url_book }}">
                 {{ beginOfUrl }}{{ bookItem.url_book }}</a></label>
             <label for="" *ngIf="bookItem.id_serie != null; else serieIsNull">Serie:
-              <a href="/serie-details/{{ bookItem.id_serie }}">{{ bookItem.id_serie }}</a>
+              <a href="/serie-details/{{ bookItem.id_serie }}">{{ serie.title_serie }}</a>
             </label>
             <ng-template #serieIsNull><label for="">Serie: <span>none</span></label></ng-template>
             <!-- <label for="">Authors: <ul>
@@ -30,8 +30,6 @@
             <label for="">Rating: <span>{{ bookItem.rating }}</span></label>
             <label for="">Description: <p>{{ bookItem.description }}</p></label>
           </div>
-
-
         </div>
 
         <!-- <div class="field">
@@ -64,6 +62,26 @@
               <p>{{ bookItem.description }}</p>
             </div> -->
       </mat-card>
+
+      <div class="relation__block">
+        <div class="authors">
+          <h3>Authors:</h3>
+          <ul>
+            <!-- <li *ngFor="let author of authors"><a href="{{ author.url_author }}">{{ author.full_name }}</a></li> -->
+            <li *ngFor="let author of authors"><a
+                href="/author-details/{{ author.id_author }}">{{ author.full_name }}</a></li>
+          </ul>
+        </div>
+        <div class="genres">
+          <h3>Genres:</h3>
+          <ul>
+            <!-- <li *ngFor="let genre of genres"><a href="{{ genre.url_genre }}">{{ genre.title_genre }}</a></li> -->
+            <li *ngFor="let genre of genres"><a href="/genre-details/{{ genre.id_genre }}">{{ genre.title_genre }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     </div>
 
     <!-- <div class="item">

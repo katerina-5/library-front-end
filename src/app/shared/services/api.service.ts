@@ -58,6 +58,33 @@ export class ApiService {
     );
   }
 
+  getBookAuthors(id_book): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/books/authors/${id_book}`,
+    );
+  }
+
+  getBookGenres(id_book): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/books/genres/${id_book}`,
+    );
+  }
+
+  getBookSerie(id_book): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/books/serie/${id_book}`,
+    );
+  }
+
+  // getSerieAuthors(id_serie): Observable<Object> { }
+  // getSerieBook(id_serie): Observable<Object> { }
+
+  // getAuthorBooks(id_author): Observable<Object> { }
+  // getAuthorGenres(id_author): Observable<Object> { }
+
+  // getGenreBooks(id_genre): Observable<Object> { }
+  // getGenreAuthors(id_genre): Observable<Object> { }
+
   searchBooks(searchRequest): Observable<Object> {
     return this.http.post(
       environment.apiUrl + '/search/books',

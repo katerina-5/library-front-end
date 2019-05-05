@@ -145,6 +145,10 @@ export class BookItemComponent implements OnInit {
   // bookItem: any;
   id: number;
 
+  authors: [];
+  genres: [];
+  serie: any;
+
   // beginOfUrl: string = environment.url;
 
   constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
@@ -173,5 +177,22 @@ export class BookItemComponent implements OnInit {
         this.bookItem = data[0];
         console.log(this.bookItem);
       });
+
+    this.dataSource.getBookAuthors(this.id)
+      .subscribe((data: any) => {
+        this.authors = data;
+      });
+
+    this.dataSource.getBookGenres(this.id)
+      .subscribe((data: any) => {
+        this.genres = data;
+      });
+
+    if (!(this.bookItem.id_serie == null)) {
+      this.dataSource.getBookSerie(this.id)
+        .subscribe((data: any) => {
+          this.serie = data[0];
+        });
+    }
   }
 }
