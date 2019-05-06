@@ -16,14 +16,16 @@
         </div>
       </mat-card>
 
-      <div>
-        <div>Authors:
+      <div class="relation__block">
+        <div>
+          <h3>Authors:</h3>
           <ul>
             <li *ngFor="let author of authors"><a
                 href="/author-details/{{ author.id_author }}">{{ author.full_name }}</a>
           </ul>
         </div>
-        <div>Books:
+        <div>
+          <h3>Books:</h3>
           <ul>
             <li *ngFor="let book of books"><a href="/book-details/{{ book.id_book }}">{{ book.title_book }}</a>
           </ul>

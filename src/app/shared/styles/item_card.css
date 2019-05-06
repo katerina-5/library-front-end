@@ -1,5 +1,5 @@
 .main {
-    min-height: calc(100vh - 2*50px);    
+    min-height: calc(100vh - 2*50px); 
 }
 
 .item {
@@ -59,8 +59,13 @@ p {
     font-weight: normal;
 }
 
-/* .field {
-    margin: 0;
+.relation__block {
+    width: 50%;
     display: flex;
-    align-items: center;
-} */
+    justify-content: space-around;
+}
+
+.relation__block > div {
+    display: flex;
+    flex-direction: column;
+}

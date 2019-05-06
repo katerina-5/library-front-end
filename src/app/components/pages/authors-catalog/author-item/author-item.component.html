@@ -25,21 +25,24 @@
         </div>
       </mat-card>
 
-      <div>
+      <div class="relation__block">
         <div>
-          <ul>Genres:
+          <h3>Genres:</h3>
+          <ul>
             <li *ngFor="let genre of genres"><a href="/genre-details/{{ genre.id_genre }}">{{ genre.title_genre }}</a>
           </ul>
         </div>
 
         <div>
-          <ul>Books:
+          <h3>Books:</h3>
+          <ul>
             <li *ngFor="let book of books"><a href="/book-details/{{ book.id_book }}">{{ book.title_book }}</a></li>
           </ul>
         </div>
 
         <div>
-          <ul>Series:
+          <h3>Series:</h3>
+          <ul>
             <li *ngFor="let serie of series"><a href="/serie-details/{{ serie.id_serie }}">{{ serie.title_serie }}</a>
             </li>
           </ul>
