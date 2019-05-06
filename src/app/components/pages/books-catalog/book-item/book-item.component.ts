@@ -147,7 +147,10 @@ export class BookItemComponent implements OnInit {
 
   authors: [];
   genres: [];
-  serie: any;
+  serie: any = {
+    id_serie: null,
+    title_serie: 'none'
+  };
 
   // beginOfUrl: string = environment.url;
 
@@ -176,6 +179,13 @@ export class BookItemComponent implements OnInit {
         console.log(data);
         this.bookItem = data[0];
         console.log(this.bookItem);
+
+        if (this.bookItem.id_serie != null) {
+          this.dataSource.getBookSerie(this.id)
+            .subscribe((dataSerie: any) => {
+              this.serie = dataSerie[0];
+            });
+        }
       });
 
     this.dataSource.getBookAuthors(this.id)
@@ -187,12 +197,5 @@ export class BookItemComponent implements OnInit {
       .subscribe((data: any) => {
         this.genres = data;
       });
-
-    if (!(this.bookItem.id_serie == null)) {
-      this.dataSource.getBookSerie(this.id)
-        .subscribe((data: any) => {
-          this.serie = data[0];
-        });
-    }
   }
 }
