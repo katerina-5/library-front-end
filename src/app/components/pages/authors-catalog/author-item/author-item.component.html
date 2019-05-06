@@ -24,6 +24,27 @@
           </div>
         </div>
       </mat-card>
+
+      <div>
+        <div>
+          <ul>Genres:
+            <li *ngFor="let genre of genres"><a href="/genre-details/{{ genre.id_genre }}">{{ genre.title_genre }}</a>
+          </ul>
+        </div>
+
+        <div>
+          <ul>Books:
+            <li *ngFor="let book of books"><a href="/book-details/{{ book.id_book }}">{{ book.title_book }}</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>Series:
+            <li *ngFor="let serie of series"><a href="/serie-details/{{ serie.id_serie }}">{{ serie.title_serie }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 

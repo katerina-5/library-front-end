@@ -34,6 +34,8 @@ export class SerieItemComponent implements OnInit {
   // @Input() serieItem: Serie;
   serieItem: Serie;
   id: number;
+  authors: [];
+  books: [];
 
   constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
     // this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
@@ -54,6 +56,16 @@ export class SerieItemComponent implements OnInit {
         console.log(data);
         this.serieItem = data[0];
         console.log(this.serieItem);
+      });
+
+    this.dataSource.getSerieAuthors(this.id)
+      .subscribe((data: any) => {
+        this.authors = data;
+      });
+
+    this.dataSource.getSerieBooks(this.id)
+      .subscribe((data: any) => {
+        this.books = data;
       });
   }
 

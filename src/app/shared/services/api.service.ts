@@ -76,14 +76,47 @@ export class ApiService {
     );
   }
 
-  // getSerieAuthors(id_serie): Observable<Object> { }
-  // getSerieBook(id_serie): Observable<Object> { }
+  getSerieAuthors(id_serie): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/series/authors/${id_serie}`,
+    );
+  }
 
-  // getAuthorBooks(id_author): Observable<Object> { }
-  // getAuthorGenres(id_author): Observable<Object> { }
+  getSerieBooks(id_serie): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/series/books/${id_serie}`,
+    );
+  }
 
-  // getGenreBooks(id_genre): Observable<Object> { }
-  // getGenreAuthors(id_genre): Observable<Object> { }
+  getAuthorBooks(id_author): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/authors/books/${id_author}`,
+    );
+  }
+
+  getAuthorGenres(id_author): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/authors/genres/${id_author}`,
+    );
+  }
+
+  getAuthorSeries(id_author): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/authors/series/${id_author}`,
+    );
+  }
+
+  getGenreBooks(id_genre): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/genres/books/${id_genre}`,
+    );
+  }
+
+  getGenreAuthors(id_genre): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/genres/authors/${id_genre}`,
+    );
+  }
 
   searchBooks(searchRequest): Observable<Object> {
     return this.http.post(

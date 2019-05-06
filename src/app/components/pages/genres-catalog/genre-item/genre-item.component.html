@@ -15,6 +15,21 @@
           </div>
         </div>
       </mat-card>
+
+      <div>
+        <div>
+          <ul>Authors:
+            <li *ngFor="let author of authors"><a
+                href="/author-details/{{ author.id_author }}">{{ author.full_name }}</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul>Books:
+            <li *ngFor="let book of books"><a href="/book-details/{{ book.id_book }}">{{ book.title_book }}</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
