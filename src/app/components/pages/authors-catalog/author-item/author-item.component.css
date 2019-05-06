@@ -1,1 +1,9 @@
 @import './../../../../shared/styles/item_card.css';
+
+.information {
+    justify-content: center;
+}
+
+.fields {
+    justify-content: stretch;
+}
