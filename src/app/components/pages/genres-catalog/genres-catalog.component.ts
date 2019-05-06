@@ -54,19 +54,26 @@ export class GenresCatalogComponent implements OnInit {
   }
 
   search(searchRequest) {
-    let message = '';
-    message += 'Search button was pressed\n';
-    message += 'Search request: ' + searchRequest;
-    alert(message);
+    if (searchRequest === '') {
+      this.dataSource.getGenres()
+        .subscribe((data: any) => {
+          console.log(data);
+          this.genres = data;
+        });
+
+      return;
+    }
+
+    this.dataSource.searchGenres(searchRequest)
+      .subscribe((data: any) => {
+        console.log(data);
+        this.genres = data;
+      });
   }
 
   pressEnter(event) {
-    let message = '';
     if (event.key === 'Enter') {
-      // this.search(event.target.value);
-      message += 'Enter button was pressed\n';
-      message += 'Search request: ' + event.target.value;
-      alert(message);
+      this.search(event.target.value);
     }
   }
 

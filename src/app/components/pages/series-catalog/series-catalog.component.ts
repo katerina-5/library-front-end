@@ -42,19 +42,26 @@ export class SeriesCatalogComponent implements OnInit {
   }
 
   search(searchRequest) {
-    let message = '';
-    message += 'Search button was pressed\n';
-    message += 'Search request: ' + searchRequest;
-    alert(message);
+    if (searchRequest === '') {
+      this.dataSource.getSeries()
+        .subscribe((data: any) => {
+          console.log(data);
+          this.series = data;
+        });
+
+      return;
+    }
+
+    this.dataSource.searchSeries(searchRequest)
+      .subscribe((data: any) => {
+        console.log(data);
+        this.series = data;
+      });
   }
 
   pressEnter(event) {
-    let message = '';
     if (event.key === 'Enter') {
-      // this.search(event.target.value);
-      message += 'Enter button was pressed\n';
-      message += 'Search request: ' + event.target.value;
-      alert(message);
+      this.search(event.target.value);
     }
   }
 
