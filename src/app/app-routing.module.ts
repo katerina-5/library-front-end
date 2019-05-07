@@ -21,6 +21,7 @@ import { EditingBooksComponent } from './components/pages/admin-editing-mode/edi
 import { EditingAuthorsComponent } from './components/pages/admin-editing-mode/editing-authors/editing-authors.component';
 import { EditingGenresComponent } from './components/pages/admin-editing-mode/editing-genres/editing-genres.component';
 import { EditingSeriesComponent } from './components/pages/admin-editing-mode/editing-series/editing-series.component';
+import { AdminProfileComponent } from './components/pages/admin-profile/admin-profile.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'admin/edit_authors', component: EditingAuthorsComponent },
   { path: 'admin/edit_genres', component: EditingGenresComponent },
   { path: 'admin/edit_series', component: EditingSeriesComponent },
+  { path: 'admin/profile', component: AdminProfileComponent },
   { path: 'not_found', component: NotFoundComponent },
   { path: 'admin', redirectTo: 'admin/sign_in', pathMatch: 'full' },
   { path: '**', redirectTo: 'not_found', pathMatch: 'full' }

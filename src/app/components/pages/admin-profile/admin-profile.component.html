@@ -1,0 +1,72 @@
+<div class="wrapper">
+  <app-admin-navbar></app-admin-navbar>
+
+  <div class="main">
+    <h1>Admin Profile:</h1>
+
+    <div class="containers">
+      <div *ngIf="isEditing; then editing_mode; else reading_mode"></div>
+      <ng-template #editing_mode>
+        <mat-card>
+          <mat-card-title>Admin's Profile Information</mat-card-title>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Login" #login value="{{ profileInformation.login }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Password" #password value="{{ profileInformation.password }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Nickname" #nickname value="{{ profileInformation.nickname }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="First name" #first_name
+              value="{{ profileInformation.first_name }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Last name" #last_name value="{{ profileInformation.last_name }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Phone" #phone value="{{ profileInformation.phone }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="E-mail" #email value="{{ profileInformation.email }}" />
+          </mat-form-field>
+          <button mat-raised-button class="save__btn"
+            (click)="saveInformation(login.value, password.value, nickname.value, first_name.value, last_name.value, phone.value, email.value)">
+            Save changes</button>
+        </mat-card>
+      </ng-template>
+      <ng-template #reading_mode>
+        <mat-card>
+          <mat-card-title>Admin's Profile Information</mat-card-title>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Login" readonly value="{{ profileInformation.login }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Password" readonly value="{{ profileInformation.password }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Nickname" readonly value="{{ profileInformation.nickname }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="First name" readonly value="{{ profileInformation.first_name }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Last name" readonly value="{{ profileInformation.last_name }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="Phone" readonly value="{{ profileInformation.phone }}" />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="E-mail" readonly value="{{ profileInformation.email }}" />
+          </mat-form-field>
+          <button mat-raised-button class="edit__btn" (click)="editInformation()">Edit information</button>
+        </mat-card>
+      </ng-template>
+
+      <div></div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

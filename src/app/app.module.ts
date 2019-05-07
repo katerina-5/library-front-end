@@ -52,6 +52,7 @@ import { EditingBooksComponent } from './components/pages/admin-editing-mode/edi
 import { EditingAuthorsComponent } from './components/pages/admin-editing-mode/editing-authors/editing-authors.component';
 import { EditingGenresComponent } from './components/pages/admin-editing-mode/editing-genres/editing-genres.component';
 import { EditingSeriesComponent } from './components/pages/admin-editing-mode/editing-series/editing-series.component';
+import { AdminProfileComponent } from './components/pages/admin-profile/admin-profile.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { EditingSeriesComponent } from './components/pages/admin-editing-mode/ed
     EditingBooksComponent,
     EditingAuthorsComponent,
     EditingGenresComponent,
-    EditingSeriesComponent
+    EditingSeriesComponent,
+    AdminProfileComponent
   ],
   imports: [
     BrowserModule,
