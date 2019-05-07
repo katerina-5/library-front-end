@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'series', component: SeriesCatalogComponent },
   { path: 'sign_in', component: SignInFormComponent },
   { path: 'sign_up', component: SignUpFormComponent },
-  { path: 'profile', component: UserProfileComponent },
+  { path: 'user/profile', component: UserProfileComponent },
   { path: 'admin/sign_in', component: AdminSignInComponent },
   { path: 'admin/main_page', component: AdminMainPageComponent },
   { path: 'admin/editing_mode', component: AdminEditingModeComponent },
