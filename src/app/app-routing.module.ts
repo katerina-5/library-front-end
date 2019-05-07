@@ -23,6 +23,7 @@ import { EditingGenresComponent } from './components/pages/admin-editing-mode/ed
 import { EditingSeriesComponent } from './components/pages/admin-editing-mode/editing-series/editing-series.component';
 import { AdminProfileComponent } from './components/pages/admin-profile/admin-profile.component';
 import { FavouriteBooksComponent } from './components/pages/favourite-books/favourite-books.component';
+import { FavouriteAuthorsComponent } from './components/pages/favourite-authors/favourite-authors.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'sign_up', component: SignUpFormComponent },
   { path: 'user/profile', component: UserProfileComponent },
   { path: 'favourite_books', component: FavouriteBooksComponent },
+  { path: 'favourite_authors', component: FavouriteAuthorsComponent },
   { path: 'admin/sign_in', component: AdminSignInComponent },
   { path: 'admin/main_page', component: AdminMainPageComponent },
   { path: 'admin/editing_mode', component: AdminEditingModeComponent },
