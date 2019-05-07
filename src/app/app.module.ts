@@ -53,6 +53,7 @@ import { EditingAuthorsComponent } from './components/pages/admin-editing-mode/e
 import { EditingGenresComponent } from './components/pages/admin-editing-mode/editing-genres/editing-genres.component';
 import { EditingSeriesComponent } from './components/pages/admin-editing-mode/editing-series/editing-series.component';
 import { AdminProfileComponent } from './components/pages/admin-profile/admin-profile.component';
+import { FavouriteBooksComponent } from './components/pages/favourite-books/favourite-books.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { AdminProfileComponent } from './components/pages/admin-profile/admin-pr
     EditingAuthorsComponent,
     EditingGenresComponent,
     EditingSeriesComponent,
-    AdminProfileComponent
+    AdminProfileComponent,
+    FavouriteBooksComponent
   ],
   imports: [
     BrowserModule,

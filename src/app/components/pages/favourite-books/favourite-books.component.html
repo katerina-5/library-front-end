@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <app-header></app-header>
+
+  <div class="main">
+    <h1>Favourite books:</h1>
+
+    <ul class="items">
+      <li class="item__wrapper" *ngFor="let book of favouriteBooks">
+        <div class="item">
+          <a [routerLink]="['/book-details', book.id_book]">{{ book.title_book }}</a>
+          <div class="item__photo">
+            <img src="{{ book.image_url }}" alt="">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <app-footer></app-footer>
+</div>
