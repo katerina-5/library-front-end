@@ -56,6 +56,7 @@ import { AdminProfileComponent } from './components/pages/admin-profile/admin-pr
 import { FavouriteBooksComponent } from './components/pages/favourite-books/favourite-books.component';
 import { FavouriteAuthorsComponent } from './components/pages/favourite-authors/favourite-authors.component';
 import { FavouriteGenresComponent } from './components/pages/favourite-genres/favourite-genres.component';
+import { FavouriteSeriesComponent } from './components/pages/favourite-series/favourite-series.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { FavouriteGenresComponent } from './components/pages/favourite-genres/fa
     AdminProfileComponent,
     FavouriteBooksComponent,
     FavouriteAuthorsComponent,
-    FavouriteGenresComponent
+    FavouriteGenresComponent,
+    FavouriteSeriesComponent
   ],
   imports: [
     BrowserModule,
