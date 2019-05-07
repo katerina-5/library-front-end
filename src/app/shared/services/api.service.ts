@@ -196,4 +196,16 @@ export class ApiService {
     );
   }
 
+  signUp(loginStr, passwordStr, surnameStr, nameStr): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/sign-up',
+      {
+        login: loginStr,
+        password: passwordStr,
+        surname: surnameStr,
+        name: nameStr
+      }
+    );
+  }
+
 }

@@ -20,7 +20,7 @@
         <mat-icon matSuffix>account_circle</mat-icon>
       </mat-form-field>
       <mat-form-field>
-        <input matInput placeholder="Password:" #password required>
+        <input matInput placeholder="Password:" #password [type]="hide ? 'password' : 'text'" required>
         <mat-icon class="icon__show__hide" matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}
         </mat-icon>
       </mat-form-field>
