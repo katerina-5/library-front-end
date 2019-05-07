@@ -69,3 +69,38 @@ p {
     display: flex;
     flex-direction: column;
 }
+
+.rel__title {
+    margin: 0;
+    text-align: center;
+}
+
+/* buttons "Add to favourite" and "Delete from favourite" */
+
+.favourite__block {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn__wrapper > button {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.like__btn {
+    display: flex;
+    align-items: center;
+    color: crimson;
+    box-shadow: 0 0 10px rgba(247, 20, 20, 0.5);
+    font-size: 20px;
+}

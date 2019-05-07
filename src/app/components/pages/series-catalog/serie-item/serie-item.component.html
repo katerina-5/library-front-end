@@ -16,16 +16,36 @@
         </div>
       </mat-card>
 
+      <div class="favourite__block">
+        <div *ngIf="favourite == false; then like_block; else dislike_block"></div>
+        <ng-template #like_block>
+          <div class="btn__wrapper">
+            <button class="like__btn" mat-raised-button (click)="updateFavouriteSeries()">
+              <mat-icon>star_border</mat-icon>
+              <span>Add to favourite</span>
+            </button>
+          </div>
+        </ng-template>
+        <ng-template #dislike_block>
+          <div class="btn__wrapper">
+            <button class="like__btn" mat-raised-button (click)="updateFavouriteSeries()">
+              <mat-icon>star</mat-icon>
+              <span>Delete from favourite</span>
+            </button>
+          </div>
+        </ng-template>
+      </div>
+
       <div class="relation__block">
         <div>
-          <h3>Authors:</h3>
+          <h3 class="rel__title">Authors:</h3>
           <ul>
             <li *ngFor="let author of authors"><a
                 href="/author-details/{{ author.id_author }}">{{ author.full_name }}</a>
           </ul>
         </div>
         <div>
-          <h3>Books:</h3>
+          <h3 class="rel__title">Books:</h3>
           <ul>
             <li *ngFor="let book of books"><a href="/book-details/{{ book.id_book }}">{{ book.title_book }}</a>
           </ul>

@@ -29,23 +29,41 @@
         </div>
       </mat-card>
 
+      <div class="favourite__block">
+        <div *ngIf="favourite == false; then like_block; else dislike_block"></div>
+        <ng-template #like_block>
+          <div class="btn__wrapper">
+            <button class="like__btn" mat-raised-button (click)="updateFavouriteAuthors()">
+              <mat-icon>star_border</mat-icon>
+              <span>Add to favourite</span>
+            </button>
+          </div>
+        </ng-template>
+        <ng-template #dislike_block>
+          <div class="btn__wrapper">
+            <button class="like__btn" mat-raised-button (click)="updateFavouriteAuthors()">
+              <mat-icon>star</mat-icon>
+              <span>Delete from favourite</span>
+            </button>
+          </div>
+        </ng-template>
+      </div>
+
       <div class="relation__block">
         <div>
-          <h3>Genres:</h3>
+          <h3 class="rel__title">Genres:</h3>
           <ul>
             <li *ngFor="let genre of genres"><a href="/genre-details/{{ genre.id_genre }}">{{ genre.title_genre }}</a>
           </ul>
         </div>
-
         <div>
-          <h3>Books:</h3>
+          <h3 class="rel__title">Books:</h3>
           <ul>
             <li *ngFor="let book of books"><a href="/book-details/{{ book.id_book }}">{{ book.title_book }}</a></li>
           </ul>
         </div>
-
         <div>
-          <h3>Series:</h3>
+          <h3 class="rel__title">Series:</h3>
           <ul>
             <li *ngFor="let serie of series"><a href="/serie-details/{{ serie.id_serie }}">{{ serie.title_serie }}</a>
             </li>

@@ -152,6 +152,8 @@ export class BookItemComponent implements OnInit {
     title_serie: 'none'
   };
 
+  favourite = false;
+
   // beginOfUrl: string = environment.url;
 
   constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
@@ -197,5 +199,9 @@ export class BookItemComponent implements OnInit {
       .subscribe((data: any) => {
         this.genres = data;
       });
+  }
+
+  updateFavouriteBooks() {
+    this.favourite = !this.favourite;
   }
 }

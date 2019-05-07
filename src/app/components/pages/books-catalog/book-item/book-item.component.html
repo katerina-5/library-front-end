@@ -8,6 +8,7 @@
           <blockquote class="entity__name">BOOK</blockquote>
           <h1>{{ bookItem.title_book }}</h1>
         </div>
+
         <div class="information">
           <div class="image">
             <img src="{{ bookItem.image_url }}" alt="">
@@ -63,17 +64,37 @@
             </div> -->
       </mat-card>
 
+      <div class="favourite__block">
+        <div *ngIf="favourite == false; then like_block; else dislike_block"></div>
+        <ng-template #like_block>
+          <div class="btn__wrapper">
+            <button class="like__btn" mat-raised-button (click)="updateFavouriteBooks()">
+              <mat-icon>star_border</mat-icon>
+              <span>Add to favourite</span>
+            </button>
+          </div>
+        </ng-template>
+        <ng-template #dislike_block>
+          <div class="btn__wrapper">
+            <button class="like__btn" mat-raised-button (click)="updateFavouriteBooks()">
+              <mat-icon>star</mat-icon>
+              <span>Delete from favourite</span>
+            </button>
+          </div>
+        </ng-template>
+      </div>
+
       <div class="relation__block">
-        <div class="authors">
-          <h3>Authors:</h3>
+        <div>
+          <h3 class="rel__title">Authors:</h3>
           <ul>
             <!-- <li *ngFor="let author of authors"><a href="{{ author.url_author }}">{{ author.full_name }}</a></li> -->
             <li *ngFor="let author of authors"><a
                 href="/author-details/{{ author.id_author }}">{{ author.full_name }}</a></li>
           </ul>
         </div>
-        <div class="genres">
-          <h3>Genres:</h3>
+        <div>
+          <h3 class="rel__title">Genres:</h3>
           <ul>
             <!-- <li *ngFor="let genre of genres"><a href="{{ genre.url_genre }}">{{ genre.title_genre }}</a></li> -->
             <li *ngFor="let genre of genres"><a href="/genre-details/{{ genre.id_genre }}">{{ genre.title_genre }}</a>

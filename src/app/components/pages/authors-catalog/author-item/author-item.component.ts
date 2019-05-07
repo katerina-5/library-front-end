@@ -55,6 +55,8 @@ export class AuthorItemComponent implements OnInit {
   books: [];
   series: [];
 
+  favourite = false;
+
   constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
     // this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
     // console.log(this.id);
@@ -90,6 +92,10 @@ export class AuthorItemComponent implements OnInit {
       .subscribe((data: any) => {
         this.series = data;
       });
+  }
+
+  updateFavouriteAuthors() {
+    this.favourite = !this.favourite;
   }
 
 }

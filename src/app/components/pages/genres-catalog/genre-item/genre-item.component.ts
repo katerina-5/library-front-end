@@ -49,6 +49,8 @@ export class GenreItemComponent implements OnInit {
   authors: [];
   books: [];
 
+  favourite = false;
+
   constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
     // this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
     // console.log(this.id);
@@ -79,6 +81,10 @@ export class GenreItemComponent implements OnInit {
       .subscribe((data: any) => {
         this.books = data;
       });
+  }
+
+  updateFavouriteGenres() {
+    this.favourite = !this.favourite;
   }
 
 }
