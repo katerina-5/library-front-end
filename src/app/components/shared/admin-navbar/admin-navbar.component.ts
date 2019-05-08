@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-navbar',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminNavbarComponent implements OnInit {
 
-  constructor() { }
+  isToken = false;
+  isAdmin = false;
+
+  constructor(private router: Router) {
+    if (localStorage.getItem('token') !== null) {
+      this.isToken = true;
+    }
+    if (localStorage.getItem('admin') === 'true') {
+      this.isAdmin = true;
+    }
+  }
 
   ngOnInit() {
+  }
+
+  signOut() {
+    // alert('Sign out!');
+
+    localStorage.removeItem('token');
+    localStorage.removeItem('admin');
+    this.isToken = false;
+    this.isAdmin = false;
+    this.router.navigate(['/sign_in']);
   }
 
 }

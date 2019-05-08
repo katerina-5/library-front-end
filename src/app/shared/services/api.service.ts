@@ -208,4 +208,14 @@ export class ApiService {
     );
   }
 
+  signInAdmin(loginStr, passwordStr): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/admin/sign-in',
+      {
+        login: loginStr,
+        password: passwordStr
+      }
+    );
+  }
+
 }
