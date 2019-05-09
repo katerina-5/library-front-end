@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-favourite-authors',
@@ -7,30 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavouriteAuthorsComponent implements OnInit {
 
-  favouriteAuthors = [{
-    id_author: 1,
-    full_name: 'Author 1'
-  },
-  {
-    id_author: 2,
-    full_name: 'Author 2'
-  },
-  {
-    id_author: 3,
-    full_name: 'Author 3'
-  },
-  {
-    id_author: 4,
-    full_name: 'Author 4'
-  },
-  {
-    id_author: 5,
-    full_name: 'Author 5'
-  }];
+  favouriteAuthors = [];
 
-  constructor() { }
+  nothing = true;
+
+  constructor(private router: Router, private dataSource: ApiService) { }
 
   ngOnInit() {
+    const token = localStorage.getItem('token');
+    if (token === null) {
+      this.router.navigate(['/']);
+    }
+
+    this.dataSource.getListOfFavouriteBooks(token)
+      .subscribe((data: any) => {
+        this.favouriteAuthors = data;
+      });
+  }
+
+  checkCountInArray() {
+    if (this.favouriteAuthors.length === 0) {
+      this.nothing = true;
+    } else {
+      this.nothing = false;
+    }
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-favourite-genres',
@@ -7,30 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavouriteGenresComponent implements OnInit {
 
-  favouriteGenres = [{
-    id_genre: 1,
-    title_genre: 'Genre 1'
-  },
-  {
-    id_genre: 2,
-    title_genre: 'Genre 2'
-  },
-  {
-    id_genre: 3,
-    title_genre: 'Genre 3'
-  },
-  {
-    id_genre: 4,
-    title_genre: 'Genre 4'
-  },
-  {
-    id_genre: 5,
-    title_genre: 'Genre 5'
-  }];
+  favouriteGenres = [];
 
-  constructor() { }
+  nothing = true;
+
+  constructor(private router: Router, private dataSource: ApiService) { }
 
   ngOnInit() {
+    const token = localStorage.getItem('token');
+    if (token === null) {
+      this.router.navigate(['/']);
+    }
+
+    this.dataSource.getListOfFavouriteGenres(token)
+      .subscribe((data: any) => {
+        this.favouriteGenres = data;
+        this.checkCountInArray();
+      });
+  }
+
+  checkCountInArray() {
+    if (this.favouriteGenres.length === 0) {
+      this.nothing = true;
+    } else {
+      this.nothing = false;
+    }
   }
 
 }

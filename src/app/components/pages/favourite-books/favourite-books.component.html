@@ -4,16 +4,23 @@
   <div class="main">
     <h1>Favourite books:</h1>
 
-    <ul class="items">
-      <li class="item__wrapper" *ngFor="let book of favouriteBooks">
-        <div class="item">
-          <a [routerLink]="['/book-details', book.id_book]">{{ book.title_book }}</a>
-          <div class="item__photo">
-            <img src="{{ book.image_url }}" alt="">
+    <div *ngIf="nothing === true; then nothing_block else favourite_block"></div>
+    <ng-template #nothing_block>
+      <p>Nothing to show</p>
+    </ng-template>
+    <ng-template #favourite_block>
+      <ul class="items">
+        <li class="item__wrapper" *ngFor="let book of favouriteBooks">
+          <div class="item">
+            <a [routerLink]="['/book-details', book.id_book]">{{ book.title_book }}</a>
+            <div class="item__photo">
+              <img src="{{ book.image_url }}" alt="">
+            </div>
           </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </ng-template>
+
   </div>
 
   <app-footer></app-footer>

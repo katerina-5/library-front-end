@@ -4,13 +4,20 @@
   <div class="main">
     <h1>Favourite series:</h1>
 
-    <ul class="items">
-      <li class="item__wrapper" *ngFor="let serie of favouriteSeries">
-        <div class="item little">
-          <a [routerLink]="['/serie-details', serie.id_serie]">{{ serie.title_serie }}</a>
-        </div>
-      </li>
-    </ul>
+    <div *ngIf="nothing === true; then nothing_block else favourite_block"></div>
+    <ng-template #nothing_block>
+      <p>Nothing to show</p>
+    </ng-template>
+    <ng-template #favourite_block>
+      <ul class="items">
+        <li class="item__wrapper" *ngFor="let serie of favouriteSeries">
+          <div class="item little">
+            <a [routerLink]="['/serie-details', serie.id_serie]">{{ serie.title_serie }}</a>
+          </div>
+        </li>
+      </ul>
+    </ng-template>
+
   </div>
 
   <app-footer></app-footer>
