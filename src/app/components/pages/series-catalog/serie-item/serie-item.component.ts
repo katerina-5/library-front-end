@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Serie } from 'src/app/shared/models/serie';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/shared/services/api.service';
@@ -10,28 +10,6 @@ import { ApiService } from 'src/app/shared/services/api.service';
 })
 export class SerieItemComponent implements OnInit {
 
-  series: Array<Serie> = [
-    {
-      idSerie: 1,
-      title: 'Властелин колец',
-      url: '/serie/368/',
-      description: ''
-    },
-    {
-      idSerie: 2,
-      title: 'Гарри Поттер',
-      url: '/serie/220/',
-      description: ''
-    },
-    {
-      idSerie: 3,
-      title: 'Остап Бендер',
-      url: '/serie/1378/',
-      description: 'Остросатирическая серия о приключениях гениального мошенника и авантюриста Остапа Бендера.'
-    }
-  ];
-
-  // @Input() serieItem: Serie;
   serieItem: Serie;
   id: number;
   authors: [];
@@ -39,15 +17,7 @@ export class SerieItemComponent implements OnInit {
 
   favourite = false;
 
-  constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) {
-    // this.id = Number.parseInt(activateRoute.snapshot.params['id'], 5);
-    // console.log(this.id);
-    // this.series.forEach(serie => {
-    //   if (serie.idSerie === this.id) {
-    //     this.serieItem = serie;
-    //   }
-    // });
-  }
+  constructor(private activateRoute: ActivatedRoute, private dataSource: ApiService) { }
 
   ngOnInit() {
     this.id = Number.parseFloat(this.activateRoute.snapshot.params['id']);
