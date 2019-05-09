@@ -9,10 +9,6 @@ import { ApiService } from 'src/app/shared/services/api.service';
 })
 export class AdminSignInComponent implements OnInit {
 
-  // DON'T USE THIS FOR PRODUCTION!!!
-  login = 'admin';
-  password = 'admin';
-
   hide = true;
 
   constructor(private router: Router, private dataSource: ApiService) { }
@@ -33,18 +29,7 @@ export class AdminSignInComponent implements OnInit {
         } else {
           alert('Authentication is failed!\n' + data.message);
         }
-      })
-    // if (this.login === login) {
-    //   if (this.password === password) {
-    //     // redirect to admin panel
-    //     this.router.navigate(['admin/main_page'])
-    //       .catch((error) => alert(error));
-    //   } else {
-    //     alert('The pair login-password doesn\'t match!');
-    //   }
-    // } else {
-    //   alert('This admin isn\'t in database!');
-    // }
+      });
   }
 
 }

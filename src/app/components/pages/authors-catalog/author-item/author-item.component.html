@@ -4,10 +4,6 @@
   <div class="main">
     <div class="item">
       <mat-card>
-        <!-- <div class="title">
-          <blockquote class="entity__name">AUTHOR</blockquote>
-          <h1>{{ authorItem.full_name }}</h1>
-        </div> -->
         <div class="information">
           <div class="image">
             <img src="{{ authorItem.image_url }}" alt="">
@@ -20,11 +16,6 @@
             </div>
             <label for="">Original name: <span>{{ authorItem.full_name_orig }}</span></label>
             <label for="">Url: <a href="{{ authorItem.url_author }}">{{ authorItem.url_author }}</a></label>
-            <!-- <label for="">Genres:
-              <ul>
-                <li *ngFor="let genre of authorItem.genres"><a href="{{ genre.url }}">{{ genre.title }}</a></li>
-              </ul>
-            </label> -->
           </div>
         </div>
       </mat-card>

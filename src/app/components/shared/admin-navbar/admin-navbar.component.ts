@@ -24,8 +24,6 @@ export class AdminNavbarComponent implements OnInit {
   }
 
   signOut() {
-    // alert('Sign out!');
-
     localStorage.removeItem('token');
     localStorage.removeItem('admin');
     this.isToken = false;

@@ -19,7 +19,6 @@ export class SignUpFormComponent implements OnInit {
   register(surname, name, login, password) {
     this.dataSource.signUp(login, password, surname, name)
       .subscribe((data: any) => {
-        // console.log(data);
         if (data.auth === 'true') {
           document.cookie = `token=${data.token}; path=/`;
           localStorage.setItem('token', data.token);
