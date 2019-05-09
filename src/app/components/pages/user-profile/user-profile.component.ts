@@ -20,6 +20,7 @@ export class UserProfileComponent implements OnInit {
   };
 
   isEditing = false;
+  isChanging = false;
 
   constructor(private router: Router, private dataSource: ApiService) { }
 
@@ -42,8 +43,8 @@ export class UserProfileComponent implements OnInit {
   saveInformation(login, password, nickname, firstName, lastName, phone, email) {
     // save profile information to database
     this.profileInformation = {
-      login: login,
-      password: password,
+      // login: login,
+      // password: password,
       nickname: nickname,
       first_name: firstName,
       last_name: lastName,
@@ -51,7 +52,26 @@ export class UserProfileComponent implements OnInit {
       email: email
     }
 
+    const token = localStorage.getItem('token');
+    this.dataSource.updateUserInformation(token, nickname, firstName, lastName, phone, email)
+      .subscribe((data: any) => {
+        //
+      })
+
     this.isEditing = !this.isEditing;
+  }
+
+  changePassword(oldPassword, newPassword) {
+    this.isChanging = !this.isChanging;
+
+    if (this.isChanging) {
+      // update password in database
+      const token = localStorage.getItem('token');
+      this.dataSource.changePassword(token, oldPassword, newPassword)
+        .subscribe((data: any) => {
+          //
+        })
+    }
   }
 
 }

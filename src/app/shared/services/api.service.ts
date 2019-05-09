@@ -368,4 +368,28 @@ export class ApiService {
     );
   }
 
+  updateUserInformation(token, nickname, first_name, last_name, phone, email): Observable<Object> {
+    return this.http.put(
+      environment.apiUrl + `/users/${token}`,
+      {
+        nickname: nickname,
+        first_name: first_name,
+        last_name: last_name,
+        phone: phone,
+        email: email
+      }
+    );
+  }
+
+  changePassword(token, oldPassword, newPassword): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/users/change_password',
+      {
+        token: token,
+        old_password: oldPassword,
+        new_password: newPassword
+      }
+    )
+  }
+
 }

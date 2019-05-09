@@ -79,6 +79,28 @@
           <mat-icon>stars</mat-icon> Favourite series
         </a>
       </div>
+
+      <div *ngIf="isChanging; then changing_mode; else simple_mode"></div>
+      <ng-template #changing_mode>
+        <mat-card>
+          <mat-card-title>Change Password Field</mat-card-title>
+          <mat-form-field>
+            <input matInput type="password" placeholder="Old password" #old_password />
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="password" placeholder="New password" #new_password />
+          </mat-form-field>
+          <button mat-raised-button class="save__btn" (click)="changePassword(old_password.value, new_password.value)">
+            Save changes</button>
+        </mat-card>
+      </ng-template>
+      <ng-template #simple_mode>
+        <mat-card>
+          <mat-card-title>Change Password Field</mat-card-title>
+          <button mat-raised-button class="edit__btn" (click)="changePassword('', '')">Change password</button>
+        </mat-card>
+      </ng-template>
+
     </div>
   </div>
 

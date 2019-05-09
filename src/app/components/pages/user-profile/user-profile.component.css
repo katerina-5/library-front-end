@@ -29,6 +29,12 @@ mat-form-field {
     padding: 0;
 }
 
+.favourite {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 a {
     margin: 5px;
     background-color: rgba(0, 153, 255, 0.1);
