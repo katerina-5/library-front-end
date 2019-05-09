@@ -92,9 +92,37 @@ export class AuthorItemComponent implements OnInit {
       .subscribe((data: any) => {
         this.series = data;
       });
+
+    this.dataSource.checkAuthorInFavourite(localStorage.getItem('token'), this.id)
+      .subscribe((data: any) => {
+        if (data === true) {
+          this.favourite = true;
+        } else {
+          this.favourite = false;
+        }
+      });
   }
 
   updateFavouriteAuthors() {
+    if (localStorage.getItem('token') === null) {
+      alert('You are not authorized user!');
+      return;
+    }
+
+    const token = localStorage.getItem('token');
+
+    if (!this.favourite) {
+      this.dataSource.addAuthorToFavourite(token, this.id)
+        .subscribe((data: any) => {
+          console.log(data);
+        });
+    } else {
+      this.dataSource.deleteAuthorFromFavourite(token, this.id)
+        .subscribe((data: any) => {
+          console.log(data);
+        });
+    }
+
     this.favourite = !this.favourite;
   }
 

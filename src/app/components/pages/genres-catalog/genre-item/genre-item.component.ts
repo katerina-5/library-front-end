@@ -81,9 +81,37 @@ export class GenreItemComponent implements OnInit {
       .subscribe((data: any) => {
         this.books = data;
       });
+
+    this.dataSource.checkGenreInFavourite(localStorage.getItem('token'), this.id)
+      .subscribe((data: any) => {
+        if (data === true) {
+          this.favourite = true;
+        } else {
+          this.favourite = false;
+        }
+      });
   }
 
   updateFavouriteGenres() {
+    if (localStorage.getItem('token') === null) {
+      alert('You are not authorized user!');
+      return;
+    }
+
+    const token = localStorage.getItem('token');
+
+    if (!this.favourite) {
+      this.dataSource.addGenreToFavourite(token, this.id)
+        .subscribe((data: any) => {
+          console.log(data);
+        });
+    } else {
+      this.dataSource.deleteGenreFromFavourite(token, this.id)
+        .subscribe((data: any) => {
+          console.log(data);
+        });
+    }
+
     this.favourite = !this.favourite;
   }
 

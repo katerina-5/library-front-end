@@ -69,9 +69,37 @@ export class SerieItemComponent implements OnInit {
       .subscribe((data: any) => {
         this.books = data;
       });
+
+    this.dataSource.checkSerieInFavourite(localStorage.getItem('token'), this.id)
+      .subscribe((data: any) => {
+        if (data === true) {
+          this.favourite = true;
+        } else {
+          this.favourite = false;
+        }
+      });
   }
 
   updateFavouriteSeries() {
+    if (localStorage.getItem('token') === null) {
+      alert('You are not authorized user!');
+      return;
+    }
+
+    const token = localStorage.getItem('token');
+
+    if (!this.favourite) {
+      this.dataSource.addSerieToFavourite(token, this.id)
+        .subscribe((data: any) => {
+          console.log(data);
+        });
+    } else {
+      this.dataSource.deleteSerieFromFavourite(token, this.id)
+        .subscribe((data: any) => {
+          console.log(data);
+        });
+    }
+
     this.favourite = !this.favourite;
   }
 

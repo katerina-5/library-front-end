@@ -199,9 +199,37 @@ export class BookItemComponent implements OnInit {
       .subscribe((data: any) => {
         this.genres = data;
       });
+
+    this.dataSource.checkBookInFavourite(localStorage.getItem('token'), this.id)
+      .subscribe((data: any) => {
+        if (data === true) {
+          this.favourite = true;
+        } else {
+          this.favourite = false;
+        }
+      });
   }
 
   updateFavouriteBooks() {
+    if (localStorage.getItem('token') === null) {
+      alert('You are not authorized user!');
+      return;
+    }
+
+    const token = localStorage.getItem('token');
+
+    if (!this.favourite) {
+      this.dataSource.addBookToFavourite(token, this.id)
+        .subscribe((data: any) => {
+          console.log(data);
+        });
+    } else {
+      this.dataSource.deleteBookFromFavourite(token, this.id)
+        .subscribe((data: any) => {
+          console.log(data);
+        });
+    }
+
     this.favourite = !this.favourite;
   }
 }
