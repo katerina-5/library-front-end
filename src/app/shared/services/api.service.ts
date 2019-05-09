@@ -362,4 +362,10 @@ export class ApiService {
     );
   }
 
+  getUserInformation(token): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/users/${token}`
+    );
+  }
+
 }

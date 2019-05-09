@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -19,9 +21,18 @@ export class UserProfileComponent implements OnInit {
 
   isEditing = false;
 
-  constructor() { }
+  constructor(private router: Router, private dataSource: ApiService) { }
 
   ngOnInit() {
+    const token = localStorage.getItem('token');
+    if (token === null) {
+      this.router.navigate(['/']);
+    }
+
+    this.dataSource.getUserInformation(token)
+      .subscribe((data: any) => {
+        this.profileInformation = data[0];
+      });
   }
 
   editInformation() {
