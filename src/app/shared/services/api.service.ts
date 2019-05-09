@@ -218,4 +218,84 @@ export class ApiService {
     );
   }
 
+  addBookToFavourite(token, id_book): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/favourite_books/',
+      {
+        token: token,
+        id_book: id_book
+      }
+    );
+  }
+
+  deleteBookFromFavourite(token, id_book): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/favourite_books/delete',
+      {
+        token: token,
+        id_book: id_book
+      }
+    );
+  }
+
+  addAuthorToFavourite(token, id_author): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/favourite_authors/',
+      {
+        token: token,
+        id_author: id_author
+      }
+    );
+  }
+
+  deleteAuthorFromFavourite(token, id_author): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/favourite_authors/delete',
+      {
+        token: token,
+        id_author: id_author
+      }
+    );
+  }
+
+  addGenreToFavourite(token, id_genre): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/favourite_genres/',
+      {
+        token: token,
+        id_genre: id_genre
+      }
+    );
+  }
+
+  deleteGenreFromFavourite(token, id_genre): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/favourite_genres/delete',
+      {
+        token: token,
+        id_genre: id_genre
+      }
+    );
+  }
+
+  addSerieToFavourite(token, id_serie): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/favourite_series/',
+      {
+        token: token,
+        id_serie: id_serie
+      }
+    );
+  }
+
+  deleteSerieFromFavourite(token, id_serie): Observable<Object> {
+    return this.http.post(
+      environment.apiUrl + '/favourite_series/delete',
+      {
+        token: token,
+        id_serie: id_serie
+      }
+    );
+  }
+
 }
