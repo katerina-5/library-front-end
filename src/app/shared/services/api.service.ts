@@ -338,4 +338,28 @@ export class ApiService {
     );
   }
 
+  getListOfFavouriteBooks(token): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/favourite_books/${token}`
+    );
+  }
+
+  getListOfFavouriteAuthors(token): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/favourite_authors/${token}`
+    );
+  }
+
+  getListOfFavouriteGenres(token): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/favourite_genres/${token}`
+    );
+  }
+
+  getListOfFavouriteSeries(token): Observable<Object> {
+    return this.http.get(
+      environment.apiUrl + `/favourite_series/${token}`
+    );
+  }
+
 }
