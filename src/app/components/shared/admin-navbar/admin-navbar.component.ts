@@ -28,7 +28,7 @@ export class AdminNavbarComponent implements OnInit {
     localStorage.removeItem('admin');
     this.isToken = false;
     this.isAdmin = false;
-    this.router.navigate(['/sign_in']);
+    this.router.navigate(['/admin/sign_in']);
   }
 
 }
