@@ -27,6 +27,7 @@ export class UserProfileComponent implements OnInit {
   ngOnInit() {
     const token = localStorage.getItem('token');
     if (token === null) {
+      alert('You are not authorized user!');
       this.router.navigate(['/sign_in']);
     }
 
