@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-admin-profile',
@@ -19,8 +20,9 @@ export class AdminProfileComponent implements OnInit {
   };
 
   isEditing = false;
+  isChanging = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private dataSource: ApiService) { }
 
   ngOnInit() {
     const token = localStorage.getItem('token');
@@ -32,17 +34,19 @@ export class AdminProfileComponent implements OnInit {
       alert('401 Unauthorized');
       this.router.navigate(['/admin/sign_in']);
     }
+
+    this.dataSource.getUserInformation(token)
+      .subscribe((data: any) => {
+        this.profileInformation = data[0];
+      });
   }
 
   editInformation() {
     this.isEditing = !this.isEditing;
   }
 
-  saveInformation(login, password, nickname, firstName, lastName, phone, email) {
-    // save profile information to database
+  saveInformation(nickname, firstName, lastName, phone, email) {
     this.profileInformation = {
-      login: login,
-      password: password,
       nickname: nickname,
       first_name: firstName,
       last_name: lastName,
@@ -50,7 +54,36 @@ export class AdminProfileComponent implements OnInit {
       email: email
     }
 
+    // save profile information to database
+
+    const token = localStorage.getItem('token');
+    this.dataSource.updateUserInformation(token, nickname, firstName, lastName, phone, email)
+      .subscribe((data: any) => {
+        // this.profileInformation = data[0];
+      });
+
     this.isEditing = !this.isEditing;
+  }
+
+  changePassword(oldPassword, newPassword) {
+    if (this.isChanging) {
+      if (oldPassword === '' || newPassword === '') {
+        alert('The fields \'Old password\' and \'New password\' can\'t be empty!');
+        this.isChanging = !this.isChanging;
+        return;
+      }
+
+      // update password in database
+      const token = localStorage.getItem('token');
+      this.dataSource.changePassword(token, oldPassword, newPassword)
+        .subscribe((data: any) => {
+          if (data.message !== undefined) {
+            alert(data.message);
+          }
+        });
+    }
+
+    this.isChanging = !this.isChanging;
   }
 
 }
