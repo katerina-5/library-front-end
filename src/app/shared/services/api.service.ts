@@ -369,9 +369,10 @@ export class ApiService {
   }
 
   updateUserInformation(token, nickname, first_name, last_name, phone, email): Observable<Object> {
-    return this.http.put(
-      environment.apiUrl + `/users/${token}`,
+    return this.http.post(
+      environment.apiUrl + `/users/update_information`,
       {
+        token: token,
         nickname: nickname,
         first_name: first_name,
         last_name: last_name,

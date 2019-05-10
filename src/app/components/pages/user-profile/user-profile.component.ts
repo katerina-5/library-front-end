@@ -41,11 +41,8 @@ export class UserProfileComponent implements OnInit {
     this.isEditing = !this.isEditing;
   }
 
-  saveInformation(login, password, nickname, firstName, lastName, phone, email) {
-    // save profile information to database
+  saveInformation(nickname, firstName, lastName, phone, email) {
     this.profileInformation = {
-      // login: login,
-      // password: password,
       nickname: nickname,
       first_name: firstName,
       last_name: lastName,
@@ -53,26 +50,36 @@ export class UserProfileComponent implements OnInit {
       email: email
     }
 
+    // save profile information to database
+
     const token = localStorage.getItem('token');
     this.dataSource.updateUserInformation(token, nickname, firstName, lastName, phone, email)
       .subscribe((data: any) => {
-        //
-      })
+        // this.profileInformation = data[0];
+      });
 
     this.isEditing = !this.isEditing;
   }
 
   changePassword(oldPassword, newPassword) {
-    this.isChanging = !this.isChanging;
-
     if (this.isChanging) {
+      if (oldPassword === '' || newPassword === '') {
+        alert('The fields \'Old password\' and \'New password\' can\'t be empty!');
+        this.isChanging = !this.isChanging;
+        return;
+      }
+
       // update password in database
       const token = localStorage.getItem('token');
       this.dataSource.changePassword(token, oldPassword, newPassword)
         .subscribe((data: any) => {
-          //
-        })
+          if (data.message !== undefined) {
+            alert(data.message);
+          }
+        });
     }
+
+    this.isChanging = !this.isChanging;
   }
 
 }
