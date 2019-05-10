@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-profile',
@@ -19,9 +20,18 @@ export class AdminProfileComponent implements OnInit {
 
   isEditing = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    const token = localStorage.getItem('token');
+    const admin = localStorage.getItem('admin');
+    if (token !== null && admin !== 'true') {
+      alert('403 Forbidden');
+      this.router.navigate(['/admin/sign_in']);
+    } else if (token === null) {
+      alert('401 Unauthorized');
+      this.router.navigate(['/admin/sign_in']);
+    }
   }
 
   editInformation() {
