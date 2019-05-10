@@ -18,7 +18,7 @@ export class FavouriteSeriesComponent implements OnInit {
   ngOnInit() {
     const token = localStorage.getItem('token');
     if (token === null) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/sign_in']);
     }
 
     this.dataSource.getListOfFavouriteBooks(token)
