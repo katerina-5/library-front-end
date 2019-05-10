@@ -22,7 +22,7 @@ export class FavouriteSeriesComponent implements OnInit {
       this.router.navigate(['/sign_in']);
     }
 
-    this.dataSource.getListOfFavouriteBooks(token)
+    this.dataSource.getListOfFavouriteSeries(token)
       .subscribe((data: any) => {
         this.favouriteSeries = data;
         this.checkCountInArray();
