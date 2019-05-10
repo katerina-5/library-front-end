@@ -10,13 +10,13 @@ import { ApiService } from 'src/app/shared/services/api.service';
 export class UserProfileComponent implements OnInit {
 
   profileInformation: any = {
-    login: 'login',
-    password: 'password',
-    nickname: 'nickname',
-    last_name: 'Surname',
-    first_name: 'Name',
-    phone: '000-000-00-00',
-    email: 'user@mail.com'
+    login: '',
+    password: '',
+    nickname: '',
+    last_name: '',
+    first_name: '',
+    phone: '',
+    email: ''
   };
 
   isEditing = false;
