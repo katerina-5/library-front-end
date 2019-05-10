@@ -25,6 +25,7 @@ export class FavouriteSeriesComponent implements OnInit {
     this.dataSource.getListOfFavouriteBooks(token)
       .subscribe((data: any) => {
         this.favouriteSeries = data;
+        this.checkCountInArray();
       });
   }
 
